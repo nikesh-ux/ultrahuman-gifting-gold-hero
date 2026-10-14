@@ -1865,7 +1865,7 @@ body .dk .wz-c{background:color-mix(in srgb,#161616 calc(var(--dk)*100%),#fff);b
 body .dk .wz-c h4{color:color-mix(in srgb,#f4f4f2 calc(var(--dk)*100%),#000)!important}
 body .dk .wz-c p{color:color-mix(in srgb,#8d8d96 calc(var(--dk)*100%),#66666f)!important}
 body .dk .wz-c .gvi{background-color:color-mix(in srgb,#161616 calc(var(--dk)*100%),#ececf0)!important}
-.dk{position:sticky;top:var(--dkt,0px);z-index:0}
+.dk{position:relative;z-index:0}
 .dk~*{position:relative;z-index:2;background:#fff;box-shadow:0 0 0 100vmax #fff;clip-path:inset(0 -100vmax)}
 html body[data-lp] .sec.fx.dk:not(#paths){padding-top:clamp(80px,9vw,144px)!important;padding-bottom:clamp(64px,7vw,112px)!important}
 html body[data-lp] .sec.fx.dk+.sec.fx:not(#paths){padding-top:clamp(56px,6vw,96px)!important}
@@ -1873,7 +1873,6 @@ html body[data-lp] .sec.fx.dk+.sec.fx:not(#paths){padding-top:clamp(56px,6vw,96p
 body .dk~.uf{margin-top:0!important}
 body .dk~.sec:has(+.uf){padding-bottom:104px!important}
 /* dwell: stay pinned for a beat so the section can be read before the next one slides over it */
-.dk{min-height:100svh;margin-bottom:clamp(220px,50svh,520px)}
 .dk>*{transform:translate3d(0,calc(var(--dkp,0)*-10svh),0);will-change:transform}
 @media(prefers-reduced-motion:reduce){.dk>*{transform:none}}
 /*DK-CSS-END*/
@@ -2061,6 +2060,7 @@ header.nav.scrolled .hd-list{gap:24px}
 .gpanel{background:#f8f8f7!important}
 .gtabs button.soon{cursor:default;pointer-events:none;color:rgba(0,0,0,.34)}.gtabs button.soon b{color:rgba(0,0,0,.22)}
 .gtabs button em{font:400 9.5px/1 "Geist Mono",ui-monospace,monospace;font-style:normal;letter-spacing:.07em;text-transform:uppercase;color:rgba(0,0,0,.4);border:1px solid rgba(0,0,0,.14);border-radius:99px;padding:4px 8px;align-self:center;white-space:nowrap}
+.gsoon{display:flex;align-items:center;min-height:46px}.gsoon span{display:inline-flex;align-items:center;height:34px;padding:0 16px;border:1px solid rgba(0,0,0,.16);border-radius:99px;font:400 11px/1 "Geist Mono",ui-monospace,monospace;letter-spacing:.07em;text-transform:uppercase;color:rgba(0,0,0,.55)}
 /*GT-CSS-END*/
 /*HX-CSS-END*/
 /*GC-CSS*/
@@ -2142,8 +2142,8 @@ body:has(.hxw.gc) header.nav:not(.scrolled) .uE8frq_trigger:hover{background:rgb
 /*GC-CSS-END*/
 /*FQD-CSS*/
 /* FAQ: dark two-column list, every answer open (matches the Ring PRO buy page) */
-html body #faq.fqd{--fqg:clamp(72px,9vw,140px);background:#000;box-shadow:0 0 0 100vmax #000;clip-path:inset(calc(-1*var(--fqg)) -100vmax 0);color:#fff;padding:clamp(80px,10.4vw,150px) 0;margin:0}
-html body #faq.fqd::before{content:"";position:absolute;left:-100vmax;right:-100vmax;bottom:100%;height:var(--fqg);background:#fff;pointer-events:none}
+html body #faq.fqd{background:#000;box-shadow:0 0 0 100vmax #000;clip-path:inset(0 -100vmax);color:#fff;padding:clamp(80px,10.4vw,150px) 0;margin:0}
+.fqd-gap{height:clamp(72px,9vw,140px)}
 .fqd-in{max-width:1320px;margin:0 auto;padding:0 clamp(24px,4.2vw,60px)}
 .fqd h2{margin:0 0 clamp(48px,6.7vw,96px);text-align:center;font:500 clamp(32px,3.34vw,48px)/1.2 Geist,system-ui,sans-serif;letter-spacing:-.033em;color:#fff}
 .fqd-row{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,64px);padding:clamp(32px,3.34vw,48px) clamp(0px,3.3vw,48px);position:relative;align-items:start}
@@ -2163,6 +2163,34 @@ html body #faq.fqd::before{content:"";position:absolute;left:-100vmax;right:-100
 .fqd .fq-own .fq-talk{all:unset;cursor:pointer;color:#fff;text-decoration:underline;text-underline-offset:3px}
 @media(max-width:899px){.fqd-row{grid-template-columns:1fr;gap:12px;padding:32px 0}.fqd-row h5{max-width:none}.fqd-a,.fqd-ask form{max-width:none}}
 /*FQD-CSS-END*/
+/*DKC-CSS*/
+/* dark highlights carousel for "A gift that keeps giving back" */
+html body[data-lp] .sec.fx.dk:not(#paths){position:sticky!important;top:var(--dkt,0px)!important;height:auto!important;min-height:100svh!important;margin-bottom:clamp(220px,50svh,520px)!important;display:block!important;padding-top:clamp(56px,6vw,96px)!important;padding-bottom:clamp(72px,8vw,128px)!important}
+.dk>*{transform:translate3d(0,calc(var(--dkp,0)*-10svh),0);will-change:transform}
+@media(prefers-reduced-motion:reduce){.dk>*{transform:none}}
+#mbar,#prog{display:none!important}
+.dkc{margin-top:clamp(28px,3vw,48px)}
+.dkc-w{position:relative}
+.dkc-tr{display:flex;gap:16px;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scrollbar-width:none;margin-inline:calc(var(--gut)*-1);padding-inline:var(--gut);scroll-padding-inline:var(--gut);overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch}
+.dkc-tr::-webkit-scrollbar{display:none}
+.dkc-tr:focus-visible{outline:2px solid rgba(255,255,255,.5);outline-offset:4px;border-radius:28px}
+.dkc-s{flex:0 0 calc((100vw - var(--gut)*2)*.45);scroll-snap-align:start;box-sizing:border-box;min-height:clamp(360px,54svh,520px);background:#161616;border-radius:28px}
+.dkc-w::before,.dkc-w::after{content:"";position:absolute;top:0;bottom:0;z-index:1;pointer-events:none;-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);transition:opacity .45s ease}
+.dkc-w::before{left:calc(var(--gut)*-1);width:var(--gut);background:linear-gradient(to right,var(--dkbg,#0b0b0d),rgba(11,11,13,0));-webkit-mask-image:linear-gradient(to right,#000 25%,transparent);mask-image:linear-gradient(to right,#000 25%,transparent)}
+.dkc-w::after{right:calc(var(--gut)*-1);width:calc(var(--gut) + 40px);background:linear-gradient(to left,var(--dkbg,#0b0b0d),rgba(11,11,13,0));-webkit-mask-image:linear-gradient(to left,#000 25%,transparent);mask-image:linear-gradient(to left,#000 25%,transparent)}
+.dkc.at-start .dkc-w::before,.dkc.at-end .dkc-w::after{opacity:0}
+.dkc-ar{all:unset;cursor:pointer;box-sizing:border-box;position:absolute;top:50%;width:64px;height:64px;margin-top:-32px;border-radius:50%;background:rgba(244,244,242,.14);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);display:grid;place-items:center;color:#f4f4f2;z-index:2;transition:background .25s,opacity .25s,transform .25s}
+.dkc-ar:hover{background:rgba(244,244,242,.26)}.dkc-ar:active{transform:scale(.94)}.dkc-ar:focus-visible{outline:2px solid #fff;outline-offset:3px}
+.dkc-ar[hidden]{display:none}
+.dkc-ar svg{width:26px;height:26px}
+.dkc-ar.next{right:calc(var(--gut)*-1 + 20px)}.dkc-ar.prev{left:calc(var(--gut)*-1 + 20px)}
+.dkc-dots{display:flex;justify-content:center;align-items:center;gap:7px;margin-top:clamp(22px,2.6vw,34px);height:12px}
+.dkc-dots button{all:unset;cursor:pointer;box-sizing:border-box;width:5px;height:5px;border-radius:99px;background:rgba(244,244,242,.3);transition:width .5s cubic-bezier(.3,.8,.2,1),background .3s}
+.dkc-dots button:hover{background:rgba(244,244,242,.5)}
+.dkc-dots button:focus-visible{outline:2px solid #fff;outline-offset:3px}
+.dkc-dots button.on{width:26px;background:#f4f4f2}
+@media(max-width:700px){.dkc-s{flex-basis:calc(100vw - var(--gut)*2 - 28px);min-height:420px}.dkc-ar{width:48px;height:48px;margin-top:-24px}.dkc-ar svg{width:20px;height:20px}.dkc-ar.next{right:calc(var(--gut)*-1 + 10px)}.dkc-ar.prev{left:calc(var(--gut)*-1 + 10px)}}
+/*DKC-CSS-END*/
 
 </style>
 
@@ -2297,8 +2325,8 @@ function csTo(i){S.cs=i;csRender();csAuto(true)}
 function csGo(d){const n=DESIGNS.length;S.cs=((S.cs||0)+d+n)%n;csRender();csAuto(true)}
 let _cst;function csAuto(reset){clearInterval(_cst);if(RM||!$('#cs'))return;_cst=setInterval(()=>{if(document.hidden)return;const h=$('#cs');if(!h||h.matches(':hover'))return;csGo(1)},3800)}
 function mcHTML(c,m,t,s){return `<div class="mc-stage"><div class="mc mc-${c}" data-t="bl" data-i="tr" data-metal="${m}"><canvas class="mc-gl"></canvas><div class="mc-tg"><span class="mc-t1">${t}</span><span class="mc-t2">${s}</span></div><i class="mc-etch mc-mk"><b class="s"></b><b class="h"></b><b class="f"></b></i></div></div>`}
-function gsec({tag,pri,title,desc,facts,price,cta,href,how,vis,pastel,rev,mc,id}){
-  return `<section class="gs"${id?` id="${id}"`:''}><div class="gpanel ${rev?'rev':''}"><div class="gtxt"><span class="gtag ${pri?'pri':''}">${tag}</span><h3>${title}</h3><p>${desc}</p><ul class="gf">${facts.map(f=>`<li>${f}</li>`).join('')}</ul><div class="gprice">${price}</div><div class="gcta"><a class="btn btn-primary btn-lg mag" href="${href}">${cta}</a><button class="btn btn-ghost btn-lg" onclick="openHow('${how}')">How it works</button></div></div><div class="gvis ${pastel?'pastel':''}${mc?' mcs':''}"${mc?'':' data-tilt'}>${vis}</div></div></section>`;
+function gsec({tag,pri,title,desc,facts,price,cta,href,how,vis,pastel,rev,mc,id,soon}){
+  return `<section class="gs"${id?` id="${id}"`:''}><div class="gpanel ${rev?'rev':''}"><div class="gtxt"><span class="gtag ${pri?'pri':''}">${tag}</span><h3>${title}</h3><p>${desc}</p><ul class="gf">${facts.map(f=>`<li>${f}</li>`).join('')}</ul>${soon?'<div class="gsoon"><span>Coming soon</span></div>':`<div class="gprice">${price}</div><div class="gcta"><a class="btn btn-primary btn-lg mag" href="${href}">${cta}</a><button class="btn btn-ghost btn-lg" onclick="openHow('${how}')">How it works</button></div>`}</div><div class="gvis ${pastel?'pastel':''}${mc?' mcs':''}"${mc?'':' data-tilt'}>${vis}</div></div></section>`;
 }
 const RENDER={AIR:'gring',PRO:'khero'};
 const DESIGNS=[{k:'gold',n:'Gold'},{k:'silver',n:'Silver'},{k:'rose',n:'Rose gold'},{k:'black',n:'Black'},{k:'champ',n:'Champagne'}];
@@ -2406,15 +2434,26 @@ function viewLanding(){
   <section class="hxw gc" aria-label="Ultrahuman Gifting"><div class="gc-ray" aria-hidden="true"></div><div class="gc-top"><h1 class="h">Give the gift<br>of Good Health.</h1></div><div class="hx" id="hx"><div class="hx-s"><div class="hx-r"><div class="hx-c" style="--zb:calc(var(--ch)*.05);--dl:.06s;--y:calc(var(--ch)*-.66);--dz:calc(var(--ch)*.975);--e1:#3a3a40;--e2:#121214;--rx:0deg;--oy:100%;--ry:0deg"><b class="lt"></b><b class="hl"></b><b class="bl"></b><div class="mc mc-gx" data-t="bl" data-i="tr" data-metal="black"><canvas class="mc-gl"></canvas><div class="mc-tg"><span class="mc-t1">Gift card</span><span class="mc-t2">For Maya Rao · Ring AIR</span></div><i class="mc-etch mc-mk"><b class="s"></b><b class="h"></b><b class="f"></b></i><i class="hx-sh" style="background:linear-gradient(180deg,rgba(14,14,26,0) 0,rgba(14,14,26,0) 8%,rgba(14,14,26,.5) 22%)"></i></div><i class="hx-b"></i><i class="hx-u"></i></div><div class="hx-c sh" style="--zb:calc(var(--ch)*.025);--dl:0s;--y:calc(var(--ch)*-.48);--dz:calc(var(--ch)*.667);--e1:#d9b0a1;--e2:#8a5f52;--rx:-32deg;--oy:100%;--ry:0deg"><b class="lt"></b><b class="hl"></b><b class="bl"></b><div class="mc mc-si" data-t="bl" data-i="tr" data-metal="rose"><canvas class="mc-gl"></canvas><div class="mc-tg"><span class="mc-t1">Gift sizing kit</span><span class="mc-t2">One ring per code</span></div><i class="mc-etch mc-mk"><b class="s"></b><b class="h"></b><b class="f"></b></i><i class="hx-sh" style="background:linear-gradient(180deg,rgba(20,20,36,0) 0,rgba(20,20,36,0) 13%,rgba(20,20,36,.5) 30%)"></i></div><i class="hx-b"></i><i class="hx-u"></i></div><div class="hx-c sh" style="--sc:1.07;--y:calc(var(--ch)*0);--dz:calc(var(--ch)*0);--e1:#e3cb94;--e2:#8a6c33;--rx:0deg;--oy:50%;--ry:0deg"><b class="lt"></b><b class="hl"></b><b class="bl"></b><div class="mc mc-au" data-t="bl" data-i="tr" data-metal="gold"><canvas class="mc-gl"></canvas><div class="mc-tg"><span class="mc-t1">Gift card</span><span class="mc-t2">For Maya Rao · Ring AIR</span></div><i class="mc-etch mc-mk"><b class="s"></b><b class="h"></b><b class="f"></b></i></div><i class="hx-b"></i><i class="hx-u"></i></div><div class="hx-c sh" style="--zb:calc(var(--ch)*.025);--dl:0s;--y:calc(var(--ch)*.45);--dz:calc(var(--ch)*.635);--e1:#dcdde0;--e2:#6d6e73;--rx:32deg;--oy:0%;--ry:0deg"><b class="lt"></b><b class="hl"></b><b class="bl"></b><div class="mc mc-sv" data-t="bl" data-i="tr" data-metal="silver"><canvas class="mc-gl"></canvas><div class="mc-tg"><span class="mc-t1">Ring voucher</span><span class="mc-t2">Value $250 · 12 months</span></div><i class="mc-etch mc-mk"><b class="s"></b><b class="h"></b><b class="f"></b></i><i class="hx-sh" style="background:linear-gradient(180deg,rgba(20,20,36,0) 0,rgba(20,20,36,.5) 73%,rgba(20,20,36,0) 90%)"></i></div><i class="hx-b"></i><i class="hx-u"></i></div><div class="hx-c" style="--zb:calc(var(--ch)*.05);--dl:.06s;--y:calc(var(--ch)*.65);--dz:calc(var(--ch)*.975);--e1:#3a3a40;--e2:#121214;--rx:0deg;--oy:0%;--ry:0deg"><b class="lt"></b><b class="hl"></b><b class="bl"></b><div class="mc mc-gx" data-t="bl" data-i="tr" data-metal="black"><canvas class="mc-gl"></canvas><div class="mc-tg"><span class="mc-t1">Gift card</span><span class="mc-t2">For Maya Rao · Ring AIR</span></div><i class="mc-etch mc-mk"><b class="s"></b><b class="h"></b><b class="f"></b></i><i class="hx-sh" style="background:linear-gradient(180deg,rgba(14,14,26,0) 0,rgba(14,14,26,.5) 77%,rgba(14,14,26,0) 93%)"></i></div><i class="hx-b"></i><i class="hx-u"></i></div></div></div></div></section>
 
   <div class="gwrap"><section class="sec" id="paths">${sh('Three ways to give','One ring at the end of each. Pick the one that fits.','lft')}</section>
-  <nav class="gtabs" id="gtabs" aria-label="Three ways to give"><div class="gt-p"><span class="gt-i"></span><button class="on" data-t="g-kit"><b>01</b>Gift sizing kits</button><button class="soon" type="button" disabled aria-disabled="true"><b>02</b>Ring vouchers<em>Coming soon</em></button><button class="soon" type="button" disabled aria-disabled="true"><b>03</b>Gift card<em>Coming soon</em></button></div></nav>
+  <nav class="gtabs" id="gtabs" aria-label="Three ways to give"><div class="gt-p"><span class="gt-i"></span><button class="on" data-t="g-kit"><b>01</b>Gift sizing kits</button><button data-t="g-voucher"><b>02</b>Ring vouchers</button><button data-t="g-card"><b>03</b>Gift card</button></div></nav>
   ${gsec({tag:'For teams · Most chosen',pri:true,title:'Gift sizing kits',desc:'Buy in bulk at a volume discount. Everyone sizes themselves at home, then picks their ring.',facts:['Up to 25% off with volume','Kits ship to you in 24 hours','Codes valid for 6 months'],price:`From <b class="num">${fmt(unit(100))}</b> per kit`,cta:'Build an order',href:'#corporate',how:'gsk',mc:1,id:'g-kit',vis:mcHTML('au','gold','Gift sizing kit','One ring per code')})}
+  ${gsec({soon:true,tag:'For teams',title:'Ring vouchers',desc:'Pick a value, get the codes, pass them on. No sizing and no shipping. They spend it on anything.',facts:['Seven values, up to 50 codes','Share by message or download as CSV','Balance stays on the code'],rev:true,mc:1,id:'g-voucher',vis:mcHTML('si','rose','Ring voucher','Value $250 · 12 months')})}
+  ${gsec({soon:true,tag:'For one person',title:'Gift card',desc:'Pay for the ring. They get an email with a code, then choose their own size and finish.',facts:['Full ring price, nothing extra','Sent now or on a date you pick','Pick a card design for the email'],mc:1,id:'g-card',vis:mcHTML('sv','silver','Gift card','For Maya Rao · Ring AIR')})}
 </div>
 
   <section class="sec fx dk">${sh('A gift that keeps giving back','Every morning, not just the day it is opened.','lft')}
-    <div class="wz-g kg">
-      <a class="wz-c" href="#gift-card"><div class="gvi"><span class="pill">Ring</span></div><h4>The ring</h4><p>${RINGS[S.ring].name}, in the size and finish they choose.</p></a>
-      <a class="wz-c" href="#gift-card"><div class="gvi"><span class="pill">App</span></div><h4>The app</h4><p>Sleep, recovery and movement, from the first night.</p></a>
-      <a class="wz-c" href="#corporate"><div class="gvi"><span class="pill">Powerplugs</span></div><h4>Powerplugs</h4><p>Add-on features that give the ring new insights, from daily focus to recovery. Membership included from day one.</p></a>
+    <div class="dkc" role="region" aria-roledescription="carousel" aria-label="What the gift includes">
+     <div class="dkc-w">
+      <div class="dkc-tr" tabindex="0">
+       <article class="dkc-s" aria-roledescription="slide" aria-label="1 of 5"></article>
+       <article class="dkc-s" aria-roledescription="slide" aria-label="2 of 5"></article>
+       <article class="dkc-s" aria-roledescription="slide" aria-label="3 of 5"></article>
+       <article class="dkc-s" aria-roledescription="slide" aria-label="4 of 5"></article>
+       <article class="dkc-s" aria-roledescription="slide" aria-label="5 of 5"></article>
+      </div>
+      <button type="button" class="dkc-ar prev" aria-label="Previous slide" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
+      <button type="button" class="dkc-ar next" aria-label="Next slide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+     </div>
+     <div class="dkc-dots"><button type="button" aria-label="Go to slide 1"></button><button type="button" aria-label="Go to slide 2"></button><button type="button" aria-label="Go to slide 3"></button><button type="button" aria-label="Go to slide 4"></button><button type="button" aria-label="Go to slide 5"></button></div>
     </div></section>
 
   <section class="sec fx">${sh('Inside the app','Everything the ring sees, in one place.','lft')}
@@ -2435,6 +2474,7 @@ function viewLanding(){
         </div>
     </div></div></section>
 
+  <div class="fqd-gap" aria-hidden="true"></div>
   <section class="fqd" id="faq"><div class="fqd-in"><h2>Good to know</h2><div class="fqd-list">
     ${GEN_FAQ().map(([q,a])=>`<div class="fqd-row rv"><h5>${q}</h5><div class="fqd-a">${a}</div></div>`).join('')}
   </div></div></section>
@@ -3216,6 +3256,27 @@ scan();new MutationObserver(()=>requestAnimationFrame(scan)).observe(document.bo
  addEventListener('scroll',()=>{if(!raf)cur=tgt=scrollY;else if(Math.abs(scrollY-cur)>4){cancelAnimationFrame(raf);raf=0;cur=tgt=scrollY}},{passive:true});
 })();
 /*SS-JS-END*/
+/*DKC-JS*/
+(function(){
+ const RM=window.matchMedia&&matchMedia('(prefers-reduced-motion:reduce)').matches;
+ function boot(root){
+  if(root._b)return;root._b=1;
+  const tr=root.querySelector('.dkc-tr'),sl=[...root.querySelectorAll('.dkc-s')],dots=[...root.querySelectorAll('.dkc-dots button')],nx=root.querySelector('.dkc-ar.next'),pv=root.querySelector('.dkc-ar.prev');
+  let cur=0,tick=0;
+  const pad=()=>parseFloat(getComputedStyle(tr).paddingLeft)||0;
+  function mark(i){cur=i;dots.forEach((d,k)=>{d.classList.toggle('on',k===i);if(k===i)d.setAttribute('aria-current','true');else d.removeAttribute('aria-current')});pv.hidden=i===0;nx.hidden=i===sl.length-1;root.classList.toggle('at-start',i===0);root.classList.toggle('at-end',i===sl.length-1)}
+  function go(i){i=Math.max(0,Math.min(sl.length-1,i));mark(i);const l=tr.scrollLeft+sl[i].getBoundingClientRect().left-tr.getBoundingClientRect().left-pad();tr.scrollTo({left:l,behavior:RM?'auto':'smooth'})}
+  function near(){tick=0;const L=tr.getBoundingClientRect().left+pad();let b=0,m=1e9;sl.forEach((s,k)=>{const d=Math.abs(s.getBoundingClientRect().left-L);if(d<m){m=d;b=k}});if(tr.scrollLeft>=tr.scrollWidth-tr.clientWidth-2)b=sl.length-1;if(b!==cur)mark(b)}
+  tr.addEventListener('scroll',()=>{if(!tick)tick=requestAnimationFrame(near)},{passive:true});
+  dots.forEach((d,k)=>d.addEventListener('click',()=>go(k)));
+  nx.addEventListener('click',()=>go(cur+1));pv.addEventListener('click',()=>go(cur-1));
+  tr.addEventListener('keydown',e=>{if(e.key==='ArrowRight'){e.preventDefault();go(cur+1)}else if(e.key==='ArrowLeft'){e.preventDefault();go(cur-1)}});
+  mark(0);
+ }
+ function scan(){document.querySelectorAll('.dkc').forEach(boot)}
+ new MutationObserver(scan).observe(document.body,{childList:true,subtree:true});scan();
+})();
+/*DKC-JS-END*/
 /*HX-JS*/
 /* start the hero intro only once every card has drawn, then run the light sweep across the gold card */
 (function(){
