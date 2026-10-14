@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gift panel ideas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Geist+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--blue:#1230b8;--mark:url(../assets/svg/logo-mark.svg)}
+body{background:#fff;color:#111;font:16px/1.45 Geist,system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased;padding:32px 32px 80px}
+h1{font-size:22px;font-weight:600}.sub{color:#777;margin:4px 0 36px}
+.tile{max-width:1240px;margin:0 auto 56px}
+.cap{display:flex;gap:12px;align-items:baseline;margin-bottom:12px;font-size:13px;color:#888}.cap b{font-size:15px;color:#111;font-weight:600}
+.p{container-type:inline-size;display:grid;grid-template-columns:1fr 1fr;border-radius:28px;overflow:hidden;position:relative;min-height:520px;isolation:isolate}
+.l{padding:clamp(28px,5cqw,64px);display:flex;flex-direction:column;justify-content:center;position:relative;z-index:1}
+.r{position:relative;display:grid;place-items:center;padding:24px;overflow:hidden}
+.eb{font:400 12.5px/1 "Geist Mono",ui-monospace,monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-bottom:22px}
+h2{font-size:clamp(34px,4.6cqw,52px);letter-spacing:-.04em;line-height:1.04;font-weight:400;margin-bottom:18px}
+.d{color:#6a6a6a;font-size:17px;max-width:34ch;margin-bottom:28px}
+ul{list-style:none;margin-bottom:28px}
+li{display:flex;gap:12px;align-items:center;padding:13px 0;font-size:16px;border-top:1px solid var(--rule,rgba(0,0,0,.09))}
+li:last-child{border-bottom:1px solid var(--rule,rgba(0,0,0,.09))}
+li:before{content:"";width:5px;height:5px;background:#111;flex:none}
+.pr{color:#777;margin-bottom:22px}.pr b{font-size:28px;font-weight:500;letter-spacing:-.03em;color:#111;margin:0 3px}
+.bt{display:flex;gap:10px}
+.bt a{display:inline-flex;align-items:center;height:46px;padding:0 26px;border-radius:99px;font-size:15px;text-decoration:none}
+.b1{background:var(--blue);color:#fff}.b2{border:1px solid rgba(0,0,0,.16);color:#111}
+/* the metal kit card (CSS approximation of the engraved rose-gold card) */
+.card{position:relative;width:min(64%,420px);aspect-ratio:1.6;border-radius:14px;background:linear-gradient(135deg,#c79786 0%,#d7a493 30%,#fde3d4 50%,#cb9380 68%,#a56d5d 100%);box-shadow:0 1px 0 rgba(255,255,255,.55) inset,0 0 0 1px rgba(120,70,55,.18),0 28px 50px -18px rgba(90,50,40,.38);z-index:1}
+.card:before{content:"";position:absolute;right:7%;top:9%;width:7%;aspect-ratio:1.3;background:rgba(140,85,70,.75);-webkit-mask:var(--mark) center/contain no-repeat;mask:var(--mark) center/contain no-repeat}
+.card i{position:absolute;left:7%;bottom:17%;font:500 clamp(18px,2.3cqw,28px)/1 Oswald,"Arial Narrow",sans-serif;font-style:normal;transform:skewX(-8deg);letter-spacing:.01em;color:rgba(125,72,60,.78);text-shadow:0 1px 0 rgba(255,255,255,.35);text-transform:uppercase}
+.card em{position:absolute;left:7%;bottom:9%;font:400 9px/1 "Geist Mono",monospace;font-style:normal;letter-spacing:.08em;color:rgba(125,72,60,.7)}
+.card.s{width:min(54%,360px)}
+
+/* 1 airy light */
+.v1{background:#f8f8f7}.v1 .r{background:#fff;margin:16px;border-radius:20px;box-shadow:0 1px 0 rgba(0,0,0,.04)}
+/* 2 warm glow */
+.v2{background:#faf6f1}.v2 .r{background:radial-gradient(60% 55% at 50% 52%,rgba(240,190,170,.55),rgba(250,246,241,0) 70%)}
+.v2 li{--rule:rgba(120,80,50,.14)}
+/* 3 holographic light */
+.v3{background:#f7f7f6}.v3 .r{margin:16px;border-radius:20px;background:
+ linear-gradient(115deg,rgba(255,255,255,0) 20%,rgba(255,255,255,.75) 38%,rgba(255,255,255,0) 52%),
+ conic-gradient(from 210deg at 30% 30%,#fdeef0,#eaf1ff,#e6fbf3,#fff7dc,#fdeef0),#fff}
+.v3 .r:after{content:"";position:absolute;inset:0;background:radial-gradient(40% 35% at var(--hx,70%) var(--hy,25%),rgba(255,255,255,.9),rgba(255,255,255,0) 70%);mix-blend-mode:soft-light;opacity:.9;pointer-events:none}
+.v3 .grain,.v10 .grain{position:absolute;inset:0;opacity:.16;mix-blend-mode:multiply;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+/* 4 rose gradient fill */
+.v4{background:#fbf8f6}.v4 .r{background:linear-gradient(160deg,#f6dcd0 0%,#f2cbbd 45%,#e9b9a8 100%);margin:16px;border-radius:20px}
+.v4 .card{box-shadow:0 1px 0 rgba(255,255,255,.55) inset,0 0 0 1px rgba(120,70,55,.2),0 34px 60px -20px rgba(110,50,35,.5)}
+/* 5 dark contrast */
+.v5{background:#f4f3f1}.v5 .r{background:radial-gradient(60% 60% at 50% 55%,#4a3b37 0,#1b1716 75%);margin:16px;border-radius:20px}
+.v5 .card{box-shadow:0 1px 0 rgba(255,255,255,.55) inset,0 0 80px rgba(230,160,140,.25),0 40px 70px -20px #000}
+/* 6 one surface + floor reflection */
+.v6{background:linear-gradient(180deg,#fbfaf9,#f1eeea)}.v6 .r{background:none}
+.v6 .card{box-shadow:0 1px 0 rgba(255,255,255,.55) inset,0 0 0 1px rgba(120,70,55,.18)}
+.v6 .card:after{content:"";position:absolute;left:4%;right:4%;top:calc(100% + 18px);height:60%;background:inherit;border-radius:14px;transform:scaleY(-1);opacity:.28;-webkit-mask:linear-gradient(to top,#000,transparent 70%);mask:linear-gradient(to top,#000,transparent 70%);filter:blur(1px)}
+.v6 .card i,.v6 .card em{}
+/* 7 fanned stack */
+.v7{background:#f9f8f7}.v7 .r{background:#fff;margin:16px;border-radius:20px}
+.v7 .gh{position:absolute;width:min(60%,390px);aspect-ratio:1.6;border-radius:14px;z-index:0}
+.v7 .g1{background:linear-gradient(135deg,#d8dbe2,#a9afbb);transform:translate(-26px,-22px) rotate(-5deg)}
+.v7 .g2{background:linear-gradient(135deg,#efd9a0,#c49a4a);transform:translate(22px,-12px) rotate(4deg)}
+/* 8 chip features */
+.v8{background:#f7f6f5}.v8 .r{background:linear-gradient(180deg,#fff,#f4efeb);margin:16px;border-radius:20px}
+.v8 ul{display:flex;flex-wrap:wrap;gap:8px}.v8 li{border:1px solid rgba(0,0,0,.1)!important;border-radius:99px;padding:9px 16px;font-size:14px;background:#fff}.v8 li:before{width:6px;height:6px;border-radius:50%;background:#c4917f}
+/* 9 editorial */
+.v9{background:#fcfbfa;border:1px solid rgba(0,0,0,.07)}.v9 .l:before{content:"01";position:absolute;top:36px;left:clamp(28px,5cqw,64px);font:400 12px "Geist Mono",monospace;color:#aaa}
+.v9 .r{background:linear-gradient(135deg,#f4f1ee,#fff 60%);perspective:1200px;border-left:1px solid rgba(0,0,0,.07)}
+.v9 .card{transform:rotateY(-14deg) rotateX(6deg) rotateZ(-1deg);box-shadow:0 1px 0 rgba(255,255,255,.55) inset,0 0 0 1px rgba(120,70,55,.18),40px 50px 60px -24px rgba(90,50,40,.4)}
+/* 10 mesh + grain */
+.v10{background:#fff}.v10 .r{margin:16px;border-radius:20px;background:
+ radial-gradient(55% 60% at 15% 15%,#fbdccf 0,transparent 70%),radial-gradient(50% 55% at 90% 25%,#f8e8c8 0,transparent 70%),radial-gradient(60% 60% at 70% 100%,#e9c3d0 0,transparent 70%),#f7eee9}
+@media(max-width:820px){.p{grid-template-columns:1fr}.r{min-height:340px}}
+</style></head><body>
+<h1>Gift sizing kit panel — 10 ideas</h1>
+<p class="sub">Same content and layout, lighter surfaces and more finish. Idea 3 has the faint holographic metal sheen (move your mouse over it).</p>
+<div id="o"></div>
+<script>
+const N=[
+['Airy light','Page grey lightened, white image panel inset'],
+['Warm glow','Ivory surface, soft rose-gold light behind the card'],
+['Holographic sheen','Very light iridescent metal in the card’s background + grain'],
+['Rose gradient','Image panel tinted to match the rose-gold card'],
+['Dark stage','Dark panel, card glows like a showpiece'],
+['Reflection','One continuous surface, card reflected on a floor'],
+['Fanned stack','Silver and champagne cards peeking behind'],
+['Chip features','Features as pills, warm white panel'],
+['Editorial tilt','Hairline frame, numbered, card in perspective'],
+['Mesh + grain','Pastel mesh gradient with film grain']
+];
+const left=`<div class="l"><div class="eb">For teams · Most chosen</div><h2>Gift sizing kits</h2><p class="d">Buy in bulk at a volume discount. Everyone sizes themselves at home, then picks their ring.</p><ul><li>Up to 25% off with volume</li><li>Kits ship to you in 24 hours</li><li>Codes valid for 6 months</li></ul><div class="pr">From<b>$262</b>per kit</div><div class="bt"><a class="b1" href="#">Build an order</a><a class="b2" href="#">How it works</a></div></div>`;
+const card=c=>`<div class="card ${c||''}"><i>Gift sizing kit</i><em>ONE RING PER CODE</em></div>`;
+const R={
+ 3:()=>`<div class="r"><div class="grain"></div>${card()}</div>`,
+ 7:()=>`<div class="r"><div class="gh g1"></div><div class="gh g2"></div>${card()}</div>`,
+ 10:()=>`<div class="r"><div class="grain"></div>${card()}</div>`
+};
+const o=document.getElementById('o');
+N.forEach((n,i)=>{
+  const k=i+1,t=document.createElement('div');t.className='tile';
+  t.innerHTML=`<div class="cap"><b>${k}. ${n[0]}</b>${n[1]}</div><div class="p v${k}">${left}${(R[k]||(()=>`<div class="r">${card()}</div>`))()}</div>`;
+  o.appendChild(t);
+});
+const v3=document.querySelector('.v3 .r');
+v3.addEventListener('pointermove',e=>{const b=v3.getBoundingClientRect();v3.style.setProperty('--hx',((e.clientX-b.left)/b.width*100)+'%');v3.style.setProperty('--hy',((e.clientY-b.top)/b.height*100)+'%')});
+</script></body></html>

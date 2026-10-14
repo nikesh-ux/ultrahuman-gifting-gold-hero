@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gift selector ideas</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--rose:linear-gradient(135deg,#e9b8a6,#c98d78);--silver:linear-gradient(135deg,#eceef2,#a9afbb);--gold:linear-gradient(135deg,#f3dfa6,#c49a4a)}
+body{font:15px/1.4 Geist,system-ui,sans-serif;-webkit-font-smoothing:antialiased;background:#f2f2f2;color:#111;padding:28px}
+h1{font-size:20px;font-weight:600}.sub{color:#777;margin:4px 0 24px}
+.g{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+@media(max-width:900px){.g{grid-template-columns:1fr}}
+.o{background:#fff;border-radius:18px;padding:22px 26px 26px;min-height:250px}
+.o>.cap{display:flex;gap:10px;align-items:baseline;margin-bottom:18px;font-size:13px;color:#888}.cap b{color:#111;font-weight:600;font-size:14px}
+.hd{font-size:28px;letter-spacing:-.03em;line-height:1.15;margin-bottom:20px}.hd span{color:#999;display:block}
+.out{margin-top:18px;padding:16px 18px;border-radius:12px;background:#f3f3f3;font-size:14px;color:#555}.out b{color:#111;display:block;font-size:16px;margin-bottom:2px}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.sw{width:34px;height:22px;border-radius:5px;display:inline-block;box-shadow:inset 0 0 0 1px rgba(0,0,0,.08)}
+.k{background:var(--rose)}.v{background:var(--silver)}.c{background:var(--gold)}
+small{font-size:12px;color:#888}
+
+/* 1 underline */
+.t1{display:flex;gap:28px;border-bottom:1px solid #e4e4e4;position:relative}
+.t1 button{padding:10px 0 14px;color:#999;font-size:16px}.t1 button.on{color:#111}
+.t1 i{position:absolute;bottom:-1px;height:2px;background:#111;transition:left .3s,width .3s}
+/* 2 sliding segmented */
+.t2{display:inline-flex;background:#eee;border-radius:99px;padding:4px;position:relative}
+.t2 button{position:relative;z-index:1;padding:10px 20px;border-radius:99px;color:#777;transition:color .25s}.t2 button.on{color:#fff}
+.t2 i{position:absolute;top:4px;bottom:4px;background:#111;border-radius:99px;transition:left .3s cubic-bezier(.3,.8,.3,1),width .3s}
+/* 3 mini cards */
+.t3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.t3 button{text-align:left;border:1px solid #e6e6e6;border-radius:14px;padding:12px;transition:.2s}
+.t3 .sw{width:100%;height:56px;border-radius:7px;margin-bottom:10px}.t3 b{display:block;font-weight:500;font-size:14px}
+.t3 button.on{border-color:#111;box-shadow:0 0 0 1px #111}
+/* 4 editorial list */
+.t4{display:flex;flex-direction:column;gap:2px}
+.t4 button{text-align:left;font-size:30px;letter-spacing:-.03em;color:#c4c4c4;transition:color .2s;display:flex;gap:12px;align-items:baseline}
+.t4 button sup{font:11px ui-monospace,monospace;letter-spacing:0}.t4 button.on{color:#111}.t4 button:hover{color:#777}.t4 button.on:hover{color:#111}
+/* 5 rail */
+.t5{position:relative;display:flex;flex-direction:column;gap:18px;padding-left:26px}
+.t5:before{content:"";position:absolute;left:5px;top:8px;bottom:8px;width:1px;background:#ddd}
+.t5 button{text-align:left;color:#999;position:relative;font-size:16px}.t5 button.on{color:#111}
+.t5 button:before{content:"";position:absolute;left:-26px;top:5px;width:11px;height:11px;border-radius:50%;background:#fff;border:1px solid #ccc;transition:.2s}
+.t5 button.on:before{background:#111;border-color:#111;box-shadow:0 0 0 4px #e8e8e8}
+/* 6 radio cards */
+.t6{display:flex;flex-direction:column;gap:8px}
+.t6 button{display:flex;gap:14px;align-items:center;text-align:left;border:1px solid #e6e6e6;border-radius:12px;padding:12px 14px;transition:.2s}
+.t6 .r{width:18px;height:18px;border-radius:50%;border:1.5px solid #bbb;flex:none;display:grid;place-items:center}.t6 .on .r{border-color:#111}.t6 .on .r:after{content:"";width:8px;height:8px;border-radius:50%;background:#111}
+.t6 .on{background:#fafafa;border-color:#111}.t6 b{font-weight:500;display:block}
+/* 7 chips */
+.t7{display:flex;gap:8px;flex-wrap:wrap}
+.t7 button{display:flex;gap:8px;align-items:center;padding:8px 16px 8px 10px;border-radius:99px;border:1px solid #e2e2e2;transition:.2s}
+.t7 .d{width:16px;height:16px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(0,0,0,.1)}
+.t7 button.on{background:#111;color:#fff;border-color:#111}
+/* 8 select */
+.t8{position:relative;display:inline-block}
+.t8>button{display:flex;gap:12px;align-items:center;border:1px solid #ddd;border-radius:12px;padding:12px 16px;min-width:270px;justify-content:space-between;background:#fff}
+.t8 ul{position:absolute;top:calc(100% + 6px);left:0;right:0;background:#fff;border-radius:12px;box-shadow:0 12px 36px rgba(0,0,0,.14);padding:6px;list-style:none;display:none;z-index:2}
+.t8.open ul{display:block}.t8 li{padding:10px 12px;border-radius:8px;cursor:pointer;display:flex;gap:10px;align-items:center}.t8 li:hover{background:#f3f3f3}
+/* 9 progress tabs */
+.t9{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.t9 button{text-align:left;padding-top:12px;position:relative;color:#aaa;font-size:15px;transition:color .2s}
+.t9 button:before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:#e4e4e4;border-radius:2px}
+.t9 button:after{content:"";position:absolute;top:0;left:0;height:3px;width:0;background:#111;border-radius:2px;transition:width .45s cubic-bezier(.3,.8,.3,1)}
+.t9 button.on{color:#111}.t9 button.on:after{width:100%}.t9 small{display:block}
+/* 10 tiles */
+.t10{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.t10 button{aspect-ratio:1/.8;border-radius:16px;padding:12px;text-align:left;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden;color:#111;transition:transform .25s,box-shadow .25s}
+.t10 button b{font-weight:500;position:relative;z-index:1}.t10 button small{position:relative;z-index:1;color:rgba(0,0,0,.55)}
+.t10 button.on{box-shadow:0 0 0 2px #111,0 12px 28px rgba(0,0,0,.14);transform:translateY(-3px)}
+.t10 button:not(.on){opacity:.6}
+</style></head><body>
+<h1>Gift selector — 10 options</h1>
+<p class="sub">Replaces the sticky pill under “Three ways to give”. All are clickable.</p>
+<div class="g" id="g"></div>
+<script>
+const D=[['kit','Gift sizing kits','For teams · most chosen','k'],['voucher','Ring vouchers','Let them pick the ring','v'],['card','Gift card','Any amount, any time','c']];
+const head='<div class="hd">Three ways to give<span>One ring at the end of each. Pick the one that fits.</span></div>';
+const outp=i=>`<div class="out"><b>${D[i][1]}</b>${D[i][2]}</div>`;
+const btn=(cls,inner,i)=>`<button class="${i==0?'on':''}" data-i="${i}">${inner}</button>`;
+const O=[
+['Underline tabs','Sliding line, text only',()=>`<div class="t1">${D.map((d,i)=>btn('',d[1],i)).join('')}<i></i></div>`,'t1'],
+['Sliding pill','Segmented, thumb glides',()=>`<div class="t2">${D.map((d,i)=>btn('',d[1],i)).join('')}<i></i></div>`,'t2'],
+['Mini product cards','Metal swatch + name',()=>`<div class="t3">${D.map((d,i)=>btn('',`<span class="sw ${d[3]}"></span><b>${d[1]}</b><small>${d[2].split(' · ')[0]}</small>`,i)).join('')}</div>`,'t3'],
+['Editorial list','Big type, others fade',()=>`<div class="t4">${D.map((d,i)=>btn('',`<sup>0${i+1}</sup>${d[1]}`,i)).join('')}</div>`,'t4'],
+['Vertical rail','Dots on a thin line',()=>`<div class="t5">${D.map((d,i)=>btn('',d[1],i)).join('')}</div>`,'t5'],
+['Radio rows','Clear, accessible',()=>`<div class="t6">${D.map((d,i)=>btn('',`<span class="r"></span><span><b>${d[1]}</b><small>${d[2]}</small></span>`,i)).join('')}</div>`,'t6'],
+['Colour chips','Dot shows the metal',()=>`<div class="t7">${D.map((d,i)=>btn('',`<span class="d ${d[3]}"></span>${d[1]}`,i)).join('')}</div>`,'t7'],
+['Dropdown','Compact, scales to more',()=>`<div class="t8"><button data-open><span class="cur"><span class="sw k"></span> Gift sizing kits</span><span>▾</span></button><ul>${D.map((d,i)=>`<li data-i="${i}"><span class="sw ${d[3]}"></span>${d[1]}</li>`).join('')}</ul></div>`,'t8'],
+['Progress bars','Top bar fills on select',()=>`<div class="t9">${D.map((d,i)=>btn('',`${d[1]}<small>${d[2].split(' · ')[0]}</small>`,i)).join('')}</div>`,'t9'],
+['Colour tiles','Big touch targets',()=>`<div class="t10">${D.map((d,i)=>`<button class="${i==0?'on':''} ${d[3]}" data-i="${i}"><b>${d[1]}</b><small>${d[2].split(' · ')[0]}</small></button>`).join('')}</div>`,'t10']
+];
+const g=document.getElementById('g');
+O.forEach((o,n)=>{
+  const e=document.createElement('div');e.className='o';
+  e.innerHTML=`<div class="cap"><b>${n+1}. ${o[0]}</b>${o[1]}</div>${head}${o[2]()}<div class="res">${outp(0)}</div>`;
+  g.appendChild(e);
+  const root=e.querySelector('.'+o[3]),res=e.querySelector('.res');
+  const set=i=>{
+    root.querySelectorAll('button[data-i],li[data-i]').forEach(b=>b.classList.toggle('on',+b.dataset.i===i));
+    res.innerHTML=outp(i);
+    const ind=root.querySelector(':scope>i'),on=root.querySelector('button.on');
+    if(ind&&on){ind.style.left=on.offsetLeft+'px';ind.style.width=on.offsetWidth+'px'}
+    const cur=root.querySelector('.cur');if(cur)cur.innerHTML=`<span class="sw ${D[i][3]}"></span> ${D[i][1]}`;
+    root.classList.remove('open');
+  };
+  root.addEventListener('click',ev=>{
+    if(ev.target.closest('[data-open]')){root.classList.toggle('open');return}
+    const b=ev.target.closest('[data-i]');if(b)set(+b.dataset.i);
+  });
+  requestAnimationFrame(()=>set(0));
+  addEventListener('load',()=>set(0));
+});
+</script></body></html>

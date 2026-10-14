@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FAQ ask ideas</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--blue:#112baf;--line:#e8e7e3}
+body{font:16px/1.4 Geist,system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased;background:#f2f2f2;color:#000;padding:28px}
+h1{font-size:20px;font-weight:600}.sub{color:#777;margin:4px 0 26px}
+.t{max-width:1100px;margin:0 auto 22px;background:#fff;border-radius:18px;padding:22px 32px 30px}
+.cap{display:flex;gap:10px;align-items:baseline;margin-bottom:14px;font-size:13px;color:#888}.cap b{color:#000;font-size:14px;font-weight:600}
+.h{font-size:34px;letter-spacing:-1.5px;margin-bottom:18px}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+input{font:inherit;color:inherit}
+.row{display:flex;justify-content:space-between;align-items:center;padding:24px 0;border-top:1px solid var(--line);font-size:17px;letter-spacing:-.5px}
+.row:last-child{border-bottom:1px solid var(--line)}
+.row i{width:16px;height:16px;position:relative}.row i:before,.row i:after{content:"";position:absolute;left:1px;top:7.5px;width:14px;height:1.5px;background:#000}.row i:after{transform:rotate(90deg)}
+.arrow{width:18px;height:18px}
+.pill{display:inline-flex;align-items:center;justify-content:center;height:43px;padding:0 24px;border-radius:50px;background:var(--blue);color:#fff;font-size:13px;letter-spacing:-.1px;white-space:nowrap}
+.mono{font:400 13px/1.2 "Geist Mono",ui-monospace,monospace;letter-spacing:.52px;text-transform:uppercase;color:rgba(0,0,0,.6)}
+.send{flex:none;width:40px;height:40px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center}
+/* 1 line only */
+.a1{display:flex;align-items:center;gap:16px;padding:20px 0;border-top:1px solid var(--line)}
+.a1 input{flex:1;border:0;outline:0;background:none;font-size:17px;letter-spacing:-.5px;padding:6px 0;caret-color:var(--blue)}
+.a1 input::placeholder{color:rgba(0,0,0,.42)}
+.a1 .go{font-size:13px;color:var(--blue);letter-spacing:-.1px;display:flex;gap:6px;align-items:center}
+/* 2 mono label + pill */
+.a2{display:flex;align-items:center;gap:20px;padding:14px 0;border-top:1px solid var(--line)}
+.a2 input{flex:1;border:0;outline:0;background:none;font-size:17px;letter-spacing:-.5px;padding:10px 0}
+.a2 input::placeholder{color:rgba(0,0,0,.42)}
+/* 3 outline pill */
+.a3{display:flex;align-items:center;gap:8px;height:56px;padding:0 6px 0 24px;border-radius:50px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.16);margin:6px 0 18px;transition:box-shadow .2s}
+.a3:focus-within{box-shadow:inset 0 0 0 1px #000}
+.a3 input{flex:1;border:0;outline:0;background:none;font-size:16px;letter-spacing:-.6px}
+.a3 input::placeholder{color:rgba(0,0,0,.6)}
+/* 4 surface card */
+.a4{display:flex;align-items:center;gap:16px;background:#fafafa;border-radius:16px;padding:16px 16px 16px 28px;margin:6px 0 18px}
+.a4 .l{flex:1}
+.a4 .l b{display:block;font-weight:400;font-size:17px;letter-spacing:-.5px;margin-bottom:2px}
+.a4 .l small{font-size:14px;color:rgba(0,0,0,.6);letter-spacing:-.14px}
+.a4 input{width:min(380px,40%);height:43px;border-radius:50px;border:1px solid rgba(0,0,0,.16);padding:0 20px;background:#fff;outline:0;font-size:14px;letter-spacing:-.14px}
+.a4 input:focus{border-color:#000}
+/* 5 rotating placeholder */
+.a5{display:flex;align-items:center;gap:12px;padding:20px 0;border-top:1px solid var(--line)}
+.a5 .ph{position:relative;flex:1;height:36px}
+.a5 input{position:absolute;inset:0;width:100%;border:0;outline:0;background:none;font-size:17px;letter-spacing:-.5px;z-index:1}
+.a5 .ghost{position:absolute;left:0;top:50%;transform:translateY(-50%);font-size:17px;letter-spacing:-.5px;color:rgba(0,0,0,.42);pointer-events:none;transition:opacity .35s,transform .35s}
+.a5 input:not(:placeholder-shown)+.ghost,.a5 input:focus+.ghost{opacity:0}
+.a5 .ghost.out{opacity:0;transform:translateY(-70%)}
+/* 6 big type */
+.a6{display:flex;align-items:center;gap:20px;border-bottom:1.5px solid #000;padding:8px 0 16px;margin:18px 0 8px}
+.a6 input{flex:1;border:0;outline:0;background:none;font-size:clamp(28px,3.4vw,40px);letter-spacing:-1.5px;caret-color:var(--blue)}
+.a6 input::placeholder{color:rgba(0,0,0,.2)}
+/* 7 chips */
+.a7 .f{display:flex;align-items:center;gap:8px;height:56px;padding:0 6px 0 24px;border-radius:50px;background:#fafafa;box-shadow:inset 0 0 0 1px rgba(0,0,0,.06);margin:6px 0 12px}
+.a7 .f input{flex:1;border:0;outline:0;background:none;font-size:16px;letter-spacing:-.6px}
+.a7 .c{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.a7 .c span{height:34px;padding:0 14px;border:1px solid rgba(0,0,0,.14);border-radius:50px;font-size:13px;line-height:32px;letter-spacing:-.1px}
+/* 8 split */
+.a8{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:32px;align-items:center;padding:28px 0;border-top:1px solid var(--line)}
+.a8 h4{font-weight:400;font-size:28px;letter-spacing:-1px;line-height:1.2;margin-top:8px}
+.a8 .f{display:flex;align-items:center;height:56px;padding:0 6px 0 24px;border-radius:50px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.16)}
+.a8 .f input{flex:1;border:0;outline:0;background:none;font-size:16px;letter-spacing:-.6px}
+/* 9 command bar */
+.a9{display:flex;align-items:center;gap:14px;height:58px;padding:0 10px 0 20px;border-radius:50px;background:#fff;box-shadow:0 4px 14px rgba(0,0,0,.08),inset 0 0 0 1px rgba(0,0,0,.06);margin:8px 0 22px}
+.a9 svg.sp{flex:none;color:var(--blue)}
+.a9 input{flex:1;border:0;outline:0;background:none;font-size:16px;letter-spacing:-.6px}
+.a9 kbd{font:400 12px/1 "Geist Mono",monospace;color:rgba(0,0,0,.5);border:1px solid rgba(0,0,0,.14);border-radius:8px;padding:6px 9px}
+/* 10 native accordion row */
+.a10{border-top:1px solid var(--line)}
+.a10 summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;padding:24px 0;font-size:17px;letter-spacing:-.5px;color:var(--blue)}
+.a10 summary::-webkit-details-marker{display:none}
+.a10 summary i{width:16px;height:16px;position:relative}.a10 summary i:before,.a10 summary i:after{content:"";position:absolute;left:1px;top:7.5px;width:14px;height:1.5px;background:var(--blue)}.a10 summary i:after{transform:rotate(90deg);transition:.2s}
+.a10[open] summary i:after{transform:rotate(0)}
+.a10 .b{display:flex;gap:10px;padding:0 0 24px}
+.a10 .b input{flex:1;height:48px;border-radius:50px;border:1px solid rgba(0,0,0,.16);padding:0 22px;outline:0;font-size:16px;letter-spacing:-.6px}
+.a10 .b input:focus{border-color:#000}
+</style></head><body>
+<h1>FAQ “ask your own question” — 10 options</h1>
+<p class="sub">Each shown at the top of the “Good to know” list with two real rows below it, so you can judge how it blends.</p>
+<div id="o"></div>
+<script>
+const ARR='<svg class="arrow" viewBox="0 0 20 20" fill="none"><path d="M4 10h11M10.5 5l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+const SP='<svg class="sp" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2l1.6 5.4L17 9l-5.4 1.6L10 16l-1.6-5.4L3 9l5.4-1.6L10 2z" fill="currentColor"/></svg>';
+const rows='<div class="row">Which regions can I gift in?<i></i></div><div class="row">Do codes expire?<i></i></div>';
+const O=[
+['Line only','Quiet, text input with an “Ask” link — closest to a plain row',`<div class="a1"><input placeholder="Ask your own question"><span class="go">Ask ${ARR}</span></div>`],
+['Mono label + pill','“Ask us” label in the system mono, blue pill button',`<div class="a2"><span class="mono">Ask us</span><input placeholder="Type your question"><span class="pill">Ask</span></div>`],
+['Outline pill','Same outline as the “How it works” button, blue send',`<div class="a3"><input placeholder="Ask your own question"><span class="send">${ARR}</span></div>`],
+['Surface card','#fafafa panel surface like the gift sections, copy + field',`<div class="a4"><div class="l"><b>Still have a question?</b><small>Type it and get an answer straight away.</small></div><input placeholder="Ask your own question"><span class="pill">Ask</span></div>`],
+['Rotating placeholder','Suggestions cycle in the placeholder, tap to type',`<div class="a5"><div class="ph"><input id="r5" placeholder=" "><span class="ghost" id="g5">Ask your own question</span></div><span class="send">${ARR}</span></div>`],
+['Big type','Heading-sized underline input, quiet and editorial',`<div class="a6"><input placeholder="Ask your own question"><span class="send">${ARR}</span></div>`],
+['Suggestions below','Pill field with the common questions as chips',`<div class="a7"><div class="f"><input placeholder="Ask your own question"><span class="send">${ARR}</span></div><div class="c"><span>Which regions can I gift in?</span><span>Do codes expire?</span><span>What about returns?</span></div></div>`],
+['Split row','Label and headline left, field right (matches the section grid)',`<div class="a8"><div><span class="mono">Still curious?</span><h4>Ask us anything about gifting.</h4></div><div class="f"><input placeholder="Type your question"><span class="send">${ARR}</span></div></div>`],
+['Command bar','Floating bar with sparkle and enter hint',`<div class="a9">${SP}<input placeholder="Ask anything about gifting"><kbd>↵</kbd></div>`],
+['Expands in the list','Looks like a normal row; opens to reveal the field',`<details class="a10"><summary>Ask your own question<i></i></summary><div class="b"><input placeholder="Type your question"><span class="pill" style="height:48px">Ask</span></div></details>`]
+];
+const o=document.getElementById('o');
+O.forEach((d,i)=>{const t=document.createElement('div');t.className='t';t.innerHTML=`<div class="cap"><b>${i+1}. ${d[0]}</b>${d[1]}</div><div class="h">Good to know</div>${d[2]}${rows}`;o.appendChild(t)});
+const S=['Which regions can I gift in?','Do codes expire?','Can I schedule a gift card?','What about returns?'];let k=0;const g=document.getElementById('g5');
+setInterval(()=>{g.classList.add('out');setTimeout(()=>{k=(k+1)%S.length;g.textContent=S[k];g.classList.remove('out')},350)},2600);
+</script></body></html>

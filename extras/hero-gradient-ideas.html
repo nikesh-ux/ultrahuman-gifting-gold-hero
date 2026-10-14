@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hero gradient ideas</title>
+<style>
+*{box-sizing:border-box;margin:0}
+body{background:#111;color:#eee;font:14px/1.4 Geist,system-ui,sans-serif;-webkit-font-smoothing:antialiased;padding:28px}
+h1{font-size:20px;font-weight:600;margin-bottom:4px}
+p.s{color:#888;margin-bottom:24px}
+.g{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
+@media(max-width:900px){.g{grid-template-columns:1fr}}
+.t figcaption{display:flex;gap:10px;margin-bottom:8px;align-items:baseline}
+.t figcaption b{font-weight:600}.t figcaption span{color:#888}
+.f{position:relative;aspect-ratio:16/9;border-radius:14px;overflow:hidden;cursor:zoom-in;isolation:isolate;background:#fff}
+.f .bg,.f .bg i{position:absolute;inset:0}
+.f .bg i{display:block}
+.f iframe{position:absolute;left:0;top:0;width:1440px;height:810px;border:0;background:transparent;pointer-events:none;transform-origin:0 0}
+.f.big{position:fixed;inset:0;z-index:50;aspect-ratio:auto;border-radius:0;cursor:zoom-out}
+.grain{position:absolute;inset:0;opacity:.18;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+</style></head><body>
+<h1>Hero background gradients — 20 static ideas</h1>
+<p class="s">Same hero (final frame) over 20 different backdrops. Click a tile to view it full screen; Esc or click to close.</p>
+<div class="g" id="g"></div>
+<script>
+const I=[
+['Dusk sides','Peach left, lilac right, clear centre',
+ 'radial-gradient(60% 80% at 0% 50%,#ffc9a8 0,transparent 70%),radial-gradient(60% 80% at 100% 50%,#c9b8ff 0,transparent 70%),#f4efee'],
+['Aurora veil','Soft vertical bands of teal and rose',
+ 'linear-gradient(90deg,#a8d8d0 0,#e9d5e0 28%,#f2eeee 50%,#e9d5e0 72%,#f0b8c8 100%)'],
+['Sunrise floor','Gold light rising from below',
+ 'radial-gradient(90% 60% at 50% 110%,#f2c46a 0,#f8dfb0 38%,transparent 72%),linear-gradient(#e6e3e0,#f3ece2)'],
+['Twin orbs','Rose-gold and steel-blue blurs',
+ 'radial-gradient(38% 55% at 8% 30%,#e8a99a 0,transparent 72%),radial-gradient(38% 55% at 92% 72%,#9fb8d8 0,transparent 72%),#eceaea'],
+['Sand to mist','One long diagonal sweep',
+ 'linear-gradient(115deg,#e7d3b3 0,#efe4d6 35%,#e3e8ee 70%,#c8d3e2 100%)'],
+['Pastel mesh','Four corner colours melting together',
+ 'radial-gradient(60% 60% at 0 0,#ffd3c2 0,transparent 70%),radial-gradient(60% 60% at 100% 0,#cfd8ff 0,transparent 70%),radial-gradient(60% 60% at 0 100%,#f5e0a8 0,transparent 70%),radial-gradient(60% 60% at 100% 100%,#f4c4dc 0,transparent 70%),#efeceb'],
+['Champagne spotlight','Warm glow behind the cards, grey edges',
+ 'radial-gradient(55% 70% at 50% 50%,#f6dfae 0,#e4d6c2 45%,#bdbab6 100%)'],
+['Cool mist','Blue-grey with a pale highlight',
+ 'radial-gradient(70% 90% at 50% 20%,#eef3f8 0,#c9d3de 60%,#a8b4c4 100%)'],
+['Rose horizon','Horizontal bands, blush to clay',
+ 'linear-gradient(180deg,#e9e2e2 0,#efcfc8 45%,#d9a89c 75%,#b98577 100%)'],
+['Mint & lavender','Two halos meeting in the middle',
+ 'radial-gradient(55% 75% at 15% 55%,#b8e6d4 0,transparent 70%),radial-gradient(55% 75% at 85% 45%,#d4c4f2 0,transparent 70%),#eeeeef'],
+['Warm / cool split','Seam softened to a gentle blend',
+ 'linear-gradient(90deg,#f0cfae 0,#ecd9c8 38%,#d9dfe8 62%,#b4c4dc 100%)'],
+['Gold conic','Blurred conic light fanning from centre',
+ 'conic-gradient(from 200deg at 50% 55%,#e9d9bd,#f6e4b0,#e9d9bd,#cfc6b8,#e9d9bd),#ddd'],
+['Gold edge glow','Inset halo hugging the frame',
+ 'radial-gradient(120% 120% at 50% 50%,#f3f0ec 45%,#ecd49a 78%,#d8b062 100%)'],
+['Sage & cream','Quiet botanical tones',
+ 'linear-gradient(120deg,#c9d4be 0,#e6e6d6 45%,#efe9dc 70%,#d6cdb4 100%)'],
+['Graphite to silver','Darker, the grey headline pops',
+ 'linear-gradient(135deg,#3a3c40 0,#6b6f76 50%,#a9adb4 100%)'],
+['Coral sunset','Peach into coral on a diagonal',
+ 'linear-gradient(135deg,#ffd9b8 0,#ffb79a 45%,#f08a80 100%)'],
+['Ice','Frosted blue fading to white at the base',
+ 'linear-gradient(180deg,#b5cfea 0,#d6e4f2 50%,#f4f6f8 100%)'],
+['Pearl holo','Faint iridescent pastel conic',
+ 'conic-gradient(from 90deg at 50% 50%,#f3d4e4,#d8e0f8,#d2f0e8,#f6ecc8,#f3d4e4),#eee'],
+['Tonal grain','Beige gradient with fine film grain',
+ 'linear-gradient(160deg,#d8cbb8 0,#e9e0d2 50%,#cdbfae 100%)','grain'],
+['Ripples','Faint gold rings radiating from centre',
+ 'repeating-radial-gradient(circle at 50% 52%,#efe6d4 0,#efe6d4 6%,#e6d8bc 9%,#efe6d4 12%),#efe6d4']
+];
+const g=document.getElementById('g');
+I.forEach((d,i)=>{
+  const f=document.createElement('figure');f.className='t';
+  f.innerHTML=`<figcaption><b>${i+1}. ${d[0]}</b><span>${d[1]}</span></figcaption>
+  <div class="f"><div class="bg" style="background:${d[2]}">${d[3]?'<i class="grain"></i>':''}</div></div>`;
+  g.appendChild(f);
+});
+const SRC='hero-cards-animation.html';
+function fit(f){const fr=f.querySelector('iframe');if(fr)fr.style.transform='scale('+f.clientWidth/1440+')'}
+const Q=[];let busy=false;
+function pump(){
+  if(busy)return;const f=Q.shift();if(!f)return;
+  if(!f.__want||f.querySelector('iframe')){pump();return}
+  busy=true;
+  const fr=document.createElement('iframe');fr.src=SRC;fr.setAttribute('scrolling','no');fr.style.visibility='hidden';
+  const done=()=>{busy=false;fr.style.visibility='';pump()};
+  fr.onload=()=>{
+    const d=fr.contentDocument;
+    const st=d.createElement('style');
+    st.textContent='html,body,.hxw{background:transparent!important}.hxw{cursor:default}';
+    d.head.appendChild(st);
+    let n=0;const t=setInterval(()=>{
+      const hx=d.getElementById('hx');n++;
+      if(hx&&hx.classList.contains('go')){
+        clearInterval(t);
+        d.getAnimations().forEach(a=>{try{a.finish()}catch(e){}});
+        setTimeout(done,400);
+      }else if(n>150){clearInterval(t);done()}
+    },100);
+  };
+  f.appendChild(fr);fit(f);
+}
+function mount(f){f.__want=true;if(!f.querySelector('iframe')&&!Q.includes(f)){Q.push(f);pump()}}
+function unmount(f){f.__want=false;const fr=f.querySelector('iframe');if(fr)fr.remove()}
+const io=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting?mount(e.target):unmount(e.target)),{rootMargin:'10% 0px'});
+document.querySelectorAll('.f').forEach(f=>{io.observe(f);f.onclick=()=>{f.classList.toggle('big');fit(f)}});
+addEventListener('keydown',e=>{if(e.key==='Escape')document.querySelectorAll('.f.big').forEach(f=>{f.classList.remove('big');fit(f)})});
+addEventListener('resize',()=>document.querySelectorAll('.f').forEach(fit));
+</script></body></html>
