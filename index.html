@@ -1,7 +1,7 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"></head><body><title>Ultrahuman Gifting</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&family=Barlow+Condensed:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Geist+Mono:wght@400;500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100;200;300;400;500;600;700;800&family=Barlow+Condensed:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Geist+Mono:wght@400;500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
 <style>
 /* Layout concept: Science-page rhythm (quiet white canvas, big rounded photo cards, hairline grids, light-weight headlines)
    with the Gifting-Flow patterns (sticky product header, image-led steps, sheet modals, minimal forms). */
@@ -2156,6 +2156,31 @@ body:has(.hxw.gc) header.nav:not(.scrolled) .uE8frq_trigger:hover{background:rgb
 .mc-stage .mc.mc-au::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;border-radius:inherit;opacity:.06;mix-blend-mode:multiply;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' seed='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .26 0 0 0 0 .17 0 0 0 0 .05 0 0 0 .9 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
 .mc-stage .mc.mc-au::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;border-radius:inherit;opacity:.26;mix-blend-mode:screen;background:linear-gradient(112deg,rgba(255,236,176,0) 14%,rgba(255,232,168,.5) 34%,rgba(255,244,200,.62) 40%,rgba(255,232,168,.35) 50%,rgba(255,226,150,.1) 66%,rgba(255,226,150,0) 80%);-webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n' x='0' y='0' width='100%25' height='100%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.95' numOctaves='3' seed='11' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 3.6 0 0 0 -1.5'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n' x='0' y='0' width='100%25' height='100%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.95' numOctaves='3' seed='11' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 3.6 0 0 0 -1.5'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");-webkit-mask-size:240px 240px;mask-size:240px 240px}
 /*CD-CSS-END*/
+/*MOB-CSS*/
+/* mobile only (phones): hero card bigger and low in the frame, tidier headline, calmer sequence, tighter video end, roomier occasions */
+@media(max-width:899px){
+ .hxw.gc .hx-s{--pp:1.7}
+ .hxw.gc .gc-top{top:23svh;gap:0}
+ .gc-top .h .a{font-size:clamp(20px,6vw,28px);line-height:1.1;letter-spacing:-.01em;margin-top:0!important;height:auto;width:auto}
+ .gc-top .h .b{font-size:clamp(46px,14.9vw,66px);line-height:1;letter-spacing:-.03em;margin-top:2px!important;height:auto;width:auto}
+ .aseq.as-done{padding-bottom:16px}
+ .aseq.as-done{display:flow-root}
+ .aseq.as-done .as-in{height:auto!important;min-height:0;margin-top:calc(var(--mpad,0px)*-1)}
+ .oc2-pin{align-items:flex-start}
+ .oc2-w{padding-top:clamp(48px,12vw,64px)}
+ html body[data-lp] .gs:not(#paths) .gpanel .gvis,html body[data-lp] .gs:not(#paths) .gpanel.rev .gvis{order:-1!important}
+ .gpanel,.gvis{isolation:isolate;overflow:hidden;transform:translateZ(0);-webkit-mask-image:-webkit-radial-gradient(#fff,#000)}
+}
+/*MOB-CSS-END*/
+/*DSK-CSS*/
+/* desktop only: the gold glow rises together with the card, the light ray arrives later and slowly */
+@media(min-width:900px){
+ .hxw.gc::before{animation:gcGlow 4.8s cubic-bezier(.4,0,.2,1) .35s both}
+ .hxw.gc::after{animation:gcDust 5.2s cubic-bezier(.4,0,.2,1) .5s both}
+ .gc-ray::after{animation-delay:11s}
+ .gc-ray{width:calc(var(--f)*1300);height:calc(var(--f)*600)}
+}
+/*DSK-CSS-END*/
 /*FQD-CSS*/
 /* FAQ: dark two-column list, every answer open (matches the Ring PRO buy page) */
 html body #faq.fqd{background:#000;box-shadow:0 0 0 100vmax #000;clip-path:inset(0 -100vmax);color:#fff;padding:clamp(80px,10.4vw,150px) 0;margin:0}
@@ -3475,6 +3500,8 @@ scan();new MutationObserver(()=>requestAnimationFrame(scan)).observe(document.bo
    const W0=st.clientWidth,mob0=W0<760;
    const bl=mob0?20:Math.round(W0*136/1512),br=W0-bl;
    hd.style.left=bl+'px';hd.style.right=bl+'px';hd.style.maxWidth='none';hd.style.margin='0';
+   hd.style.top='';st.style.setProperty('--mpad','0px');
+   if(mob0){const nat=hd.offsetTop,gh=hd.offsetHeight+64+(br-bl)*9/16,t=Math.max(nat,Math.round((st.clientHeight-gh)/2));hd.style.top=t+'px';st.style.setProperty('--mpad',(t-nat)+'px')}
    const bt=hd.offsetTop+hd.offsetHeight+64,bh=(br-bl)*9/16;
    st.style.minHeight=Math.ceil(bt+bh+24)+'px';
    const W=st.clientWidth,H=st.clientHeight,mob=W<760;
@@ -3499,7 +3526,7 @@ scan();new MutationObserver(()=>requestAnimationFrame(scan)).observe(document.bo
     const rise=L(H*(1.3+.03*i),H*.84,gi);
     const sway=Math.sin(p*14+i*1.7)*W*.018*(1-mi);
     const cx=L(l.sx!==undefined?W*l.sx+sway:cxp+sway,cxp,mi),cy=L(rise,cyp,mi);
-    const rx=L(l.rx,l.ex,mi),ry=L(l.ry,l.ey,mi);
+    const sx=G.mob?1.9:1,sy=G.mob?.58:1,rx=L(l.rx*sx,l.ex,mi),ry=L(l.ry*sy,l.ey,mi);
     return `radial-gradient(ellipse ${rx.toFixed(1)}px ${ry.toFixed(1)}px at ${cx.toFixed(1)}px ${cy.toFixed(1)}px,${gs(l.c,A*l.a*(1-mi*l.fade))})`}).join(',');
    Object.assign(g2.style,{left:(cxp-R)+'px',top:(cyp-R)+'px',width:(2*R)+'px',height:(2*R)+'px',opacity:sw*(1-oi),filter:`blur(${(1-sw)*10}px)`,boxShadow:`0 ${5.8*u}px ${12.7*u}px rgba(0,0,0,${.35*sw})`});
    gWas=gAct;}
@@ -3593,15 +3620,19 @@ x.putImageData(im,0,0);document.documentElement.style.setProperty('--face','url(
   C.forEach((c,k)=>{c.getAnimations().forEach(a=>a.cancel());c.style.transform='translate3d(0,200cqw,0)';c.classList.toggle('off',k!==2)});
   const ez=bz(.3,0,.28,1),fr=[];
   for(let n=0;n<=260;n++){const t=n/260,u=ez(t),k=Math.exp(pch(lk(S.z),lk(M.z),lk(E.z),um,u));fr.push({offset:t,transform:P(0,pch(S.y,M.y,E.y,um,u),D*(1-1/k),pch(S.rx,M.rx,E.rx,um,u),0,0,pch(S.s,M.s,E.s,um,u))})}
-  g.animate(fr,{duration:4600,delay:350,easing:'linear',fill:'both'});
+  if(innerWidth<900){/* phones: the card stands on one long edge, leaning, and swings down into place */
+   const A={y:150,z:20,rx:24,ry:-78,rz:-104,s:.74},Z={y:30,z:0,rx:9,ry:-14,rz:-67,s:.8},L=(m,n,u)=>m+(n-m)*u,f2=[];
+   for(let n=0;n<=200;n++){const t=n/200,u=ez(t),w=Math.sin(t*10.5)*Math.pow(1-t,2.2);f2.push({offset:t,transform:P(0,L(A.y,Z.y,u),L(A.z,Z.z,u),L(A.rx,Z.rx,u)+3*w,L(A.ry,Z.ry,u)+9*w,L(A.rz,Z.rz,u)-5*w,L(A.s,Z.s,u))})}
+   g.animate(f2,{duration:4200,delay:350,easing:'linear',fill:'both'});
+  }else g.animate(fr,{duration:4600,delay:350,easing:'linear',fill:'both'});
   let cm=g.querySelector('.cm');if(!cm){cm=document.createElement('b');cm.className='cm';g.insertBefore(cm,g.querySelector('.hl'))}
   cm.animate([{opacity:1},{opacity:1,offset:.12},{opacity:0}],ease());
   ['.mc-mk','.mc-tg'].forEach(q=>{const e=g.querySelector('.mc').querySelector(q);if(e)e.animate([{opacity:0},{opacity:1}],ease({delay:900,duration:2600},'cubic-bezier(.45,0,.25,1)'))});
   g.querySelector('.lt').animate([{opacity:.12},{opacity:.12,offset:.35},{opacity:1}],ease({duration:4200,easing:'ease-out'}));
   g.querySelectorAll('.hl,.bl').forEach(e=>e.animate([{opacity:0},{opacity:0,offset:.3},{opacity:1}],ease()));
-  const ray=hx.closest('.hxw').querySelector('.gc-ray');if(ray&&!(window.matchMedia&&matchMedia('(prefers-reduced-motion:reduce)').matches))if(ray&&!(window.matchMedia&&matchMedia('(prefers-reduced-motion:reduce)').matches)){ray.animate([{opacity:0},{opacity:innerWidth<900?.51:.56}],{duration:1900,delay:3300,easing:'cubic-bezier(.3,0,.2,1)',fill:'both'});const lp={delay:4000,direction:'alternate',iterations:Infinity,easing:'ease-in-out',fill:'both'};ray.animate([{filter:'blur(calc(var(--f)*25.35)) brightness(.85)'},{filter:'blur(calc(var(--f)*25.35)) brightness(1.15)'}],{...lp,duration:5200})}
+  const ray=hx.closest('.hxw').querySelector('.gc-ray');if(ray&&!(window.matchMedia&&matchMedia('(prefers-reduced-motion:reduce)').matches))if(ray&&!(window.matchMedia&&matchMedia('(prefers-reduced-motion:reduce)').matches)){if(innerWidth<900)ray.animate([{opacity:0},{opacity:innerWidth<900?.51:.56}],{duration:1900,delay:3300,easing:'cubic-bezier(.3,0,.2,1)',fill:'both'});else ray.animate([{opacity:0,transform:'scaleX(-1) rotate(6deg) scaleY(.86)'},{opacity:.12,offset:.3,transform:'scaleX(-1) rotate(3.5deg) scaleY(.92)'},{opacity:.56,transform:'scaleX(-1) rotate(0deg) scaleY(1)'}],{duration:7500,delay:4600,easing:'cubic-bezier(.3,.1,.2,1)',fill:'both'});const lp={delay:innerWidth<900?4000:11000,direction:'alternate',iterations:Infinity,easing:'ease-in-out',fill:'both'};ray.animate([{filter:'blur(calc(var(--f)*25.35)) brightness(.85)'},{filter:'blur(calc(var(--f)*25.35)) brightness(1.15)'}],{...lp,duration:5200})}
   const gt=hx.closest('.hxw').querySelector('.gc-top');
-  if(gt&&!(window.matchMedia&&matchMedia('(prefers-reduced-motion:reduce)').matches))[['.h',700]].forEach(([q,dl])=>{const e=gt.querySelector(q);if(e)e.animate([{maskPosition:'100% 0',webkitMaskPosition:'100% 0',opacity:0,filter:'blur(10px)',transform:'translateY(14px)'},{opacity:1,offset:.45},{maskPosition:'0% 0',webkitMaskPosition:'0% 0',opacity:1,filter:'blur(0px)',transform:'translateY(0)'}],{duration:3400,delay:dl,easing:'cubic-bezier(.3,0,.28,1)',fill:'both'})});
+  if(gt&&!(window.matchMedia&&matchMedia('(prefers-reduced-motion:reduce)').matches))[['.h',innerWidth<900?3800:700]].forEach(([q,dl])=>{const e=gt.querySelector(q);if(e)e.animate([{maskPosition:'100% 0',webkitMaskPosition:'100% 0',opacity:0,filter:'blur(10px)',transform:'translateY(14px)'},{opacity:1,offset:.45},{maskPosition:'0% 0',webkitMaskPosition:'0% 0',opacity:1,filter:'blur(0px)',transform:'translateY(0)'}],{duration:3400,delay:dl,easing:'cubic-bezier(.3,0,.28,1)',fill:'both'})});
  }
  function arm(hx){
   if(hx._ga)return;hx._ga=1;
