@@ -3454,8 +3454,11 @@ scan();new MutationObserver(()=>requestAnimationFrame(scan)).observe(document.bo
   }
   let G=null,gWas=true;
   function measure(){
-   /* the card is always exactly 16:9; if the screen is short the stage grows to hold it */
-   const bl=hd.offsetLeft,br=bl+hd.offsetWidth,bt=hd.offsetTop+hd.offsetHeight+28,bh=(br-bl)*9/16;
+   /* card inset as in the first version of this section (136/1512 of the stage each side); the header lines up with the card; always exactly 16:9 */
+   const W0=st.clientWidth,mob0=W0<760;
+   const bl=mob0?20:Math.round(W0*136/1512),br=W0-bl;
+   hd.style.left=bl+'px';hd.style.right=bl+'px';hd.style.maxWidth='none';hd.style.margin='0';
+   const bt=hd.offsetTop+hd.offsetHeight+64,bh=(br-bl)*9/16;
    st.style.minHeight=Math.ceil(bt+bh+24)+'px';
    const W=st.clientWidth,H=st.clientHeight,mob=W<760;
    const u=mob?Math.min(W/560,H/982):Math.min(W/1512,H/982),ox=(W-1512*u)/2,oy=(H-982*u)/2;
