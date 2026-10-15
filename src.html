@@ -2244,6 +2244,7 @@ html body[data-lp] .sec.fx.dk:not(#paths){position:sticky!important;top:var(--dk
 html.asdbg #app>*:not(#aseq),html.asdbg header.nav,html.asdbg #mbar,html.asdbg #prog,html.asdbg .bbar2{display:none!important}
 html.asdbg .aseq{height:100vh!important}html.asdbg .as-in{position:relative!important;top:0!important;height:100vh!important;min-height:0!important}
 .aseq{position:relative;height:820svh;background:#fff}.aseq.as-done{height:auto;padding-bottom:clamp(96px,12vw,200px)}.aseq.as-done .as-in{position:relative;top:0}
+.as-nb{display:block;position:sticky;top:0;height:var(--navh,65px);margin-bottom:calc(var(--navh,65px)*-1);background:#f5f5f5;pointer-events:none}.aseq.as-done .as-nb,html.asdbg .as-nb{display:none}
 .as-in{position:sticky;top:var(--navh,65px);height:calc(100svh - var(--navh,65px));overflow:hidden;--sh:0}
 .as-clip{position:absolute;inset:0;background:#f5f5f5;clip-path:inset(0 0 0 0 round 0);will-change:clip-path}
 .as-grp{position:absolute;left:0;top:0;width:0;height:0;transform-origin:0 0;will-change:transform}
@@ -2604,7 +2605,7 @@ function viewLanding(){
      <div class="dkc-dots"><button type="button" aria-label="Go to slide 1"></button><button type="button" aria-label="Go to slide 2"></button><button type="button" aria-label="Go to slide 3"></button><button type="button" aria-label="Go to slide 4"></button><button type="button" aria-label="Go to slide 5"></button></div>
     </div></section>
 
-  <section class="aseq" id="aseq" aria-label="Inside the app"><div class="as-in">
+  <section class="aseq" id="aseq" aria-label="Inside the app"><i class="as-nb" aria-hidden="true"></i><div class="as-in">
     <div class="as-clip"><div class="as-gr"></div><div class="as-g2"></div><div class="as-grp">
       <div class="as-phone"><div class="as-scr">
         <div class="as-hd as-i" data-i="0"><span class="as-time">9:41</span><img class="as-cell" alt="" src="__SVG:ua-cell__"><img class="as-wifi" alt="" src="__SVG:ua-wifi__"><i class="as-bat"></i><i class="as-bat2"></i><img class="as-cap" alt="" src="__SVG:ua-cap__"><div class="as-logo"><img alt="" src="__SVG:ua-wordmark__"><img class="as-chev" alt="" src="__SVG:ua-chev__"></div></div>
@@ -3446,7 +3447,7 @@ scan();new MutationObserver(()=>requestAnimationFrame(scan)).observe(document.bo
  let ticking=0,best=0;/* scrolling back rewinds the intro until the video opens; after that it stays put until a refresh */
  function init(){
   const sec=document.getElementById('aseq');if(!sec||sec._i)return;sec._i=1;
-  const q=s=>sec.querySelector(s),st=q('.as-in'),clip=q('.as-clip'),grp=q('.as-grp'),orb=q('.as-orb'),gr=q('.as-gr'),g2=q('.as-g2'),ph=q('.as-phone'),os=q('.as-os'),on=q('.as-on'),vid=q('.as-v'),hd=q('.as-h'),
+  const q=s=>sec.querySelector(s),nb=q('.as-nb'),st=q('.as-in'),clip=q('.as-clip'),grp=q('.as-grp'),orb=q('.as-orb'),gr=q('.as-gr'),g2=q('.as-g2'),ph=q('.as-phone'),os=q('.as-os'),on=q('.as-on'),vid=q('.as-v'),hd=q('.as-h'),
    its=[...sec.querySelectorAll('.as-i')];
   let vOn=false;
   let cur=0,last=0;
@@ -3508,6 +3509,7 @@ scan();new MutationObserver(()=>requestAnimationFrame(scan)).observe(document.bo
    const c1=ez(E(p,.60,.80));
    const AA=[0,0,W,H];
    const rc=AA.map((a,i)=>L(a,B[i],c1)),rad=L(0,32,c1);
+   if(nb)nb.style.opacity=(1-c1).toFixed(3);
    clip.style.clipPath=`inset(${rc[1]}px ${W-rc[2]}px ${H-rc[3]}px ${rc[0]}px round ${rad}px)`;
    grp.style.left=L(ox+756*u,(B[0]+B[2])/2,c1)+'px';grp.style.top=L(oy+490*u,(B[1]+B[3])/2,c1)+'px';grp.style.transform=`scale(${u*(1-.15*c1)})`;
    /* then the film plays in the card */
