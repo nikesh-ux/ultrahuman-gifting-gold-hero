@@ -1,6 +1,6 @@
-# v3 · Metal cards hero (snapshot)
+# Ultrahuman gifting prototype · live build
 
-A frozen copy of the gifting prototype as of the metal-card hero work. `v2/` keeps moving; this folder does not.
+The current gifting prototype: gold-card hero, gift panels, dark highlights, the scroll-driven app intro with video, occasions and FAQ. Published with GitHub Pages.
 
 - `src.html`: prototype source. Rebuild with `python3 build.py` (writes `artifact.html` and `index.html`).
 - `index.html`: the built prototype, open directly in a browser.

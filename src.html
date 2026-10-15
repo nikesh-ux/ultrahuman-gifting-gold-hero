@@ -1311,7 +1311,7 @@ body[data-lp="0"] .srow{max-width:1100px;margin:0 auto}
 
 /* ======================= HI-FI WIREFRAME MODE: no imagery, placeholders only ======================= */
 :root{--wf:#e7e7eb;--wf-line:#cdcdd4}
-img:not(.lm):not(.lw){visibility:hidden!important}
+img:not(.lm):not(.lw):not(.as-in *){visibility:hidden!important}
 .gvis,.hiw-vis,.bx-i,.bp-t,.bp-rt,.oc-i,.bg-img,.bx-hero,.bx-cards figure>div,.gvi,.hcell .vis,.rp .art,.solo .art,.sumtop .tb,.bp-gal,.hm-card-in,.appvis{
  background-color:var(--wf)!important;
  background-image:linear-gradient(to top right,transparent calc(50% - .6px),var(--wf-line) 50%,transparent calc(50% + .6px)),linear-gradient(to bottom right,transparent calc(50% - .6px),var(--wf-line) 50%,transparent calc(50% + .6px))!important}
@@ -1976,7 +1976,6 @@ html body[data-lp] .sec.fx.oc2:not(#paths){--ocn:10;--ocs:13svh;height:calc(100s
 }
 html body[data-lp] .sec.fx.oc2+.sec.fx:not(#paths){padding-top:clamp(88px,10vw,168px)!important}
 .gtabs.stuck::before{content:"";position:absolute;left:0;right:0;bottom:100%;height:var(--navh,69px);background:rgba(255,255,255,.96);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);pointer-events:none}
-html.hxlock,html.hxlock body{overflow:hidden!important;overscroll-behavior:none}
 /*OC-CSS-END*//*OC-CSS-END*/
 /*HD-CSS*/
 :root{--hdr-text:#000;--hdr-bg:rgba(255,255,255,.92);--hdr-bg-compact:rgba(255,255,255,.95);--hdr-pill-shadow:0 4px 14px rgba(0,0,0,.1),inset 0 0 0 1px rgba(0,0,0,.06);--hdr-pill-shadow-idle:0 4px 14px rgba(0,0,0,0),inset 0 0 0 1px rgba(0,0,0,0);--hdr-cta-bg:#112baf;--hdr-cta-text:#fff;--hdr-dur:.5s;--nav-h:72px}
@@ -2171,7 +2170,7 @@ html body[data-lp] .sec.fx.dk:not(#paths){position:sticky!important;top:var(--dk
 #mbar,#prog{display:none!important}
 .dkc{margin-top:clamp(28px,3vw,48px)}
 .dkc-w{position:relative}
-.dkc-tr{display:flex;gap:16px;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scrollbar-width:none;margin-inline:calc(var(--gut)*-1);padding-inline:var(--gut);scroll-padding-inline:var(--gut);overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch}
+.dkc-tr{display:flex;gap:16px;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scrollbar-width:none;margin-inline:calc(var(--gut)*-1);padding-inline:var(--cg,10px);scroll-padding-inline:var(--cg,10px);overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch}
 .dkc-tr::-webkit-scrollbar{display:none}
 .dkc-tr:focus-visible{outline:2px solid rgba(255,255,255,.5);outline-offset:4px;border-radius:28px}
 .dkc-s{flex:0 0 calc((100vw - var(--gut)*2)*.45);scroll-snap-align:start;box-sizing:border-box;min-height:clamp(360px,54svh,520px);background:#161616;border-radius:28px}
@@ -2190,6 +2189,138 @@ html body[data-lp] .sec.fx.dk:not(#paths){position:sticky!important;top:var(--dk
 .dkc-dots button:focus-visible{outline:2px solid #fff;outline-offset:3px}
 .dkc-dots button.on{width:26px;background:#f4f4f2}
 @media(max-width:700px){.dkc-s{flex-basis:calc(100vw - var(--gut)*2 - 28px);min-height:420px}.dkc-ar{width:48px;height:48px;margin-top:-24px}.dkc-ar svg{width:20px;height:20px}.dkc-ar.next{right:calc(var(--gut)*-1 + 10px)}.dkc-ar.prev{left:calc(var(--gut)*-1 + 10px)}}
+/*DKS-CSS*/
+.dkc-s{display:flex;flex-direction:column;padding:clamp(22px,2.4vw,34px);color:#f4f4f2}
+.dks-k{font-family:var(--mono);font-size:12px;letter-spacing:.02em;color:#8d8d96;text-transform:uppercase}
+.dkc-s h3{margin-top:14px;font-size:clamp(24px,2.3vw,34px);font-weight:400;letter-spacing:-.045em;line-height:1.08;max-width:15em}
+.dkc-s p{margin-top:12px;font-size:15px;line-height:1.5;color:#8d8d96;max-width:30em}
+.dks-v{margin-top:auto;padding-top:28px;color:#f4f4f2;display:flex;flex-direction:column;gap:16px;align-items:flex-start}
+.dks-sv{width:100%;height:auto;max-height:110px}
+.dks-rg{width:112px;height:112px}
+.dks-ch{display:flex;flex-wrap:wrap;gap:8px}
+.dks-ch span{display:inline-flex;align-items:center;height:30px;padding:0 13px;border-radius:99px;background:rgba(255,255,255,.08);font-size:13px;letter-spacing:-.01em;color:#d8d8dc}
+.dks-ch.big span{height:38px;padding:0 18px;font-size:15px}
+/*DKS-CSS-END*/
+/*NM-CSS*/
+.fb-num{aspect-ratio:auto!important;gap:36px;min-height:clamp(380px,32vw,520px);align-items:stretch!important;justify-content:space-between!important;text-align:left!important}
+.nm-k{font-family:var(--mono);font-size:12px;letter-spacing:.02em;text-transform:uppercase;color:rgba(0,0,0,.5)}
+.fb-num h4{font-size:clamp(28px,3vw,44px);font-weight:400;letter-spacing:-.05em;line-height:1.05;max-width:11em;margin:14px 0 0}
+.nm-l{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.nm-l li{display:flex;flex-direction:column;gap:4px;padding:18px 0;border-top:1.5px solid rgba(0,0,0,.08)}
+.nm-l b{font-size:clamp(20px,1.8vw,26px);font-weight:450;letter-spacing:-.04em}
+.nm-l span{font-size:14px;color:rgba(0,0,0,.6)}
+/*NM-CSS-END*/
+/*VD-CSS*/
+#gbands{margin-top:clamp(28px,3vw,44px)}
+.cap-tr{position:relative;height:4px;border-radius:9px;background:#e8e8ea}
+.cap-tr i{display:block;height:100%;background:var(--bp-sel);border-radius:9px;transition:width .7s cubic-bezier(.2,.8,.2,1)}
+.cap-tr u{position:absolute;top:-3px;width:2px;height:10px;margin-left:-1px;background:#fff;border-radius:2px}
+.cap-tk{position:relative;height:22px;margin-top:12px}
+.cap-tk span{position:absolute;top:0;transform:translateX(-50%);font-family:var(--bp-mono);font-size:11.5px;font-weight:500;letter-spacing:.6px;text-transform:uppercase;color:rgba(0,0,0,.3);transition:color .4s}
+.cap-tk span:first-child{transform:none}.cap-tk span:last-child{transform:translateX(-100%)}
+.cap-tk span.on{color:#000}
+.cap-rows{margin-top:16px;border-top:1px solid rgba(0,0,0,.1)}
+.cap-r{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:15px 0;border-bottom:1px solid rgba(0,0,0,.1);font-size:16px;letter-spacing:-.04em}
+.cap-l2{display:flex;align-items:center;gap:10px;color:rgba(0,0,0,.6)}
+.cap-p{display:flex;align-items:baseline;gap:10px;margin:0}
+.cap-p b{font-family:var(--bp-mono);font-weight:500;font-size:16px;letter-spacing:-.04em;font-feature-settings:"lnum","tnum"}
+.cap-p s{font-family:var(--bp-mono);font-size:13px;color:rgba(0,0,0,.35);letter-spacing:-.04em}
+/*VD-CSS-END*/
+/*AS-CSS*/
+html.asdbg #app>*:not(#aseq),html.asdbg header.nav,html.asdbg #mbar,html.asdbg #prog,html.asdbg .bbar2{display:none!important}
+html.asdbg .aseq{height:100vh!important}html.asdbg .as-in{position:relative!important;top:0!important;height:100vh!important;min-height:0!important}
+.aseq{position:relative;height:820svh;background:#fff}.aseq.as-done{height:auto;padding-bottom:clamp(96px,12vw,200px)}.aseq.as-done .as-in{position:relative;top:0}
+.as-in{position:sticky;top:var(--navh,65px);height:calc(100svh - var(--navh,65px));overflow:hidden;--sh:0}
+.as-clip{position:absolute;inset:0;background:#f5f5f5;clip-path:inset(0 0 0 0 round 0);will-change:clip-path}
+.as-grp{position:absolute;left:0;top:0;width:0;height:0;transform-origin:0 0;will-change:transform}
+.as-gr{position:absolute;inset:0;opacity:1;pointer-events:none;will-change:background}
+.as-g2{position:absolute;left:0;top:0;width:0;height:0;border-radius:50%;background:radial-gradient(circle at 38% 30%,#5aa2ff 0%,#2467f2 42%,#0b2a7a 100%);opacity:0;pointer-events:none;will-change:opacity,filter}
+.as-halo{position:absolute;left:-150px;top:-150px;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(40,110,255,.55),rgba(40,110,255,0) 65%);opacity:0;will-change:opacity,transform}
+.as-orb{position:absolute;left:-80.5px;top:-80px;width:161px;height:160px;border-radius:50%;overflow:hidden;box-shadow:0 5.79px 12.74px rgba(0,0,0,calc(.35*var(--sh)));opacity:0;will-change:transform,opacity,filter;background:#0d2a6b}
+.as-orb img{position:absolute;inset:-3%;width:106%;height:106%;max-width:none;object-fit:cover}
+.as-os{position:absolute;left:0;right:0;top:46px;text-align:center;font-family:'JetBrains Mono',var(--mono);font-size:10.7px;font-weight:500;letter-spacing:0;text-transform:uppercase;color:#fff;opacity:0}
+.as-on{position:absolute;left:0;right:0;top:62px;text-align:center;font-family:'JetBrains Mono',var(--mono);font-size:48px;font-weight:400;line-height:47px;color:#fff;opacity:0;font-variant-numeric:tabular-nums}
+.as-phone{position:absolute;left:-211px;top:-207px;width:425px;height:1500px;border-radius:40px;background:rgba(177,177,177,.1);box-shadow:0 4px 54.5px rgba(0,0,0,.08);overflow:hidden;opacity:0;will-change:opacity,transform}
+.as-scr{position:absolute;left:11.5px;top:11px;width:402px;height:1500px;border-radius:32px;background:#f5f5f5;overflow:hidden}
+.as-i{will-change:opacity,transform}
+.as-hd{position:absolute;left:0;top:0;width:402px;height:104px}
+.as-time{position:absolute;left:26px;top:15px;width:54px;text-align:center;font:590 17px/22px -apple-system,'SF Pro',Inter,sans-serif;color:#000}
+.as-hd img{position:absolute;max-width:none}
+.as-cell{left:294px;top:20px;width:20px;height:12px}.as-wifi{left:321px;top:20px;width:17.5px;height:12px}
+.as-bat{position:absolute;left:348px;top:19.3px;width:25px;height:13px;border:1px solid #000;border-radius:3.5px;opacity:.35}
+.as-bat2{position:absolute;left:350px;top:21.3px;width:21px;height:9px;border-radius:1.3px;background:#000}
+.as-cap{left:374.6px;top:24px;width:1.4px;height:4px}
+.as-logo{position:absolute;left:135.7px;top:72px;display:flex;align-items:center;gap:4px}
+.as-logo img{position:static;display:block}.as-logo img:first-child{width:121px;height:11px}.as-chev{width:24px;height:24px}
+.as-stack{position:absolute;left:19px;top:116px;width:364px;display:flex;flex-direction:column;align-items:center;gap:32px}
+.as-ph{width:161px;height:160px}
+.as-txt{display:flex;flex-direction:column;align-items:center;text-align:center;gap:4px;color:#000;letter-spacing:-.4px}
+.as-txt b{font:500 17px/24px -apple-system,'SF Pro',Inter,sans-serif}
+.as-txt p{margin:0;font:400 14px/20px -apple-system,'SF Pro',Inter,sans-serif;width:364px}
+.as-tl{margin-top:-16px;width:366px;display:flex;flex-direction:column;gap:2px;padding:0 30px}
+.as-bar{position:relative;height:5px;width:290px;margin:4px auto 0}
+.as-bar::before{content:"";position:absolute;left:-32px;right:-32px;top:1px;height:3px;border-radius:9px;background:linear-gradient(90deg,transparent,rgba(0,0,0,.024) 10%,rgba(0,0,0,.3) 90%,rgba(0,0,0,.024))}
+.as-bar span{position:absolute;top:0;height:5px;border-radius:9px;background:#000;box-shadow:0 0 2px rgba(255,255,255,.5)}
+.as-bar em{position:absolute;left:-8px;top:0;width:6px;height:6px;border-radius:50%;background:#000}
+.as-tm{position:relative;display:flex;justify-content:space-between;align-items:flex-start;width:360px;margin:6px 0 0 -30px;font-family:'JetBrains Mono',var(--mono);font-size:12px;line-height:16px;color:rgba(23,23,23,.8)}
+.as-tm span{display:flex;align-items:center;gap:2px}.as-tm img{width:10px;height:10px;display:block}
+.as-tm strong{position:absolute;left:0;right:0;top:12px;text-align:center;font-size:16px;line-height:24px;font-weight:700;color:#141414;text-transform:uppercase}
+.as-sc{display:flex;flex-direction:column;align-items:center;gap:12px;margin-top:6px}
+.as-sc small{font-family:'JetBrains Mono',var(--mono);font-size:13px;line-height:18px;font-weight:500;text-transform:uppercase;color:#a1a1aa}
+.as-card{width:370px;background:#fff;border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:12px}
+.as-card>div{display:flex;justify-content:space-between;align-items:center;font-family:'JetBrains Mono',var(--mono);font-size:14px;line-height:20px;font-weight:500;text-transform:uppercase;white-space:nowrap}
+.as-card span{display:flex;align-items:center;gap:4px;color:#171717}.as-card span img{width:14px;height:14px}
+.as-card b{font-weight:500}.as-card .ok{color:#0eaf5d}.as-card .bad{color:#dc2a6e}
+.as-h{position:absolute;left:var(--gut);right:var(--gut);top:clamp(56px,9vh,104px);padding:0;max-width:1424px;margin:0 auto;opacity:0;pointer-events:none;will-change:opacity,transform;z-index:3}
+.as-h h2,.as-h p{margin:0;font-size:clamp(28px,2.5vw,40px);line-height:1.2;letter-spacing:-1px;font-weight:400}
+.as-h h2{color:#000}.as-h p{color:rgba(0,0,0,.4)}
+.aseq.as-done .as-h{opacity:1!important;transform:none!important}
+.as-v{position:absolute;opacity:0;object-fit:cover;pointer-events:none;will-change:opacity;transform:scale(1.012)}
+@media(prefers-reduced-motion:reduce){.aseq{height:auto}.as-in{position:relative}}
+/*AS-CSS-END*/
+/*RC-CSS*/
+/* one corner radius for every card on every page, the same as the video card */
+:root{--rc:32px;--cg:10px}
+html body:not(#rc1):not(#rc2) :is(.gpanel,.dkc-s,.bp-gal,.bgal,.bp-sum,.bp-card,.hiw-vis,.vc,.cc,.sumcard,.ok-hero,.codes,.fcard,.gvis.big){border-radius:var(--rc)!important}
+html body:not(#rc1):not(#rc2) .gpanel .gvis{border-radius:calc(var(--rc) - 16px)!important}
+/*FT-CSS*/
+/* the intro section is a plain white block: no full-bleed shadow or clip, which left a hairline at its bottom edge */
+html body:not(#rc1):not(#rc2) #aseq{box-shadow:none!important;clip-path:none!important}
+/* the occasions image has no box: its edges dissolve into the page */
+html body:not(#rc1):not(#rc2) .oc2-f{border-radius:0!important;background:none!important;box-shadow:none!important;overflow:visible!important;
+ -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 16%,#000 84%,transparent 100%),linear-gradient(180deg,transparent 0,#000 20%,#000 62%,transparent 100%);
+ mask-image:linear-gradient(90deg,transparent 0,#000 16%,#000 84%,transparent 100%),linear-gradient(180deg,transparent 0,#000 20%,#000 62%,transparent 100%);
+ -webkit-mask-composite:source-in;mask-composite:intersect}
+html body:not(#rc1):not(#rc2) .oc2-f .oc2-g{border-radius:0!important}
+/*FT-CSS-END*/
+html body:not(#rc1):not(#rc2) .gs .gpanel{margin-left:calc(var(--cg) - var(--gut))!important;margin-right:calc(var(--cg) - var(--gut))!important;max-width:none!important;width:auto!important}
+/*RC-CSS-END*/
+/*WY-CSS*/
+/* "Three ways to give" as three stacked tiles: #ways */
+.wy{background:#fff;padding-bottom:clamp(72px,8vw,120px)}
+.wy-h{max-width:1424px;margin:0 auto;padding:clamp(40px,6vw,88px) var(--gut) clamp(36px,4.5vw,64px)}
+.wy-h h1{font-size:clamp(40px,5.6vw,80px);font-weight:400;letter-spacing:-.06em;line-height:1.02;margin:0}
+.wy-h p{margin:16px 0 0;font-size:clamp(20px,2vw,28px);line-height:1.25;letter-spacing:-.04em;color:rgba(0,0,0,.4);max-width:22em}
+.wy-g{max-width:1424px;margin:0 auto;padding:0 var(--gut);display:flex;flex-direction:column;gap:14px}
+.wy-t{position:relative;overflow:hidden;border-radius:var(--rc,32px);background:#f3f3f4;color:#000;min-height:clamp(520px,44vw,640px);padding:clamp(28px,3.4vw,52px);display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(24px,4vw,72px);align-items:stretch}
+.wy-tx{display:flex;flex-direction:column;justify-content:space-between;gap:36px;max-width:620px}
+.wy-tag{font-family:var(--mono);font-size:13px;letter-spacing:.52px;text-transform:uppercase;color:rgba(0,0,0,.55)}
+.wy-t h3{font-size:clamp(40px,5vw,72px);font-weight:400;letter-spacing:-.058em;line-height:1.02;margin:14px 0 0}
+.wy-t .wy-lead{margin:16px 0 0;font-size:clamp(16px,1.4vw,20px);line-height:1.4;letter-spacing:-.03em;color:rgba(0,0,0,.62);max-width:22em}
+.wy-how{display:flex;flex-direction:column;gap:16px}
+.wy-s{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,1.8vw,28px)}
+.wy-s div{border-top:1px solid rgba(0,0,0,.16);padding-top:14px}
+.wy-s i{font-family:var(--mono);font-size:12px;letter-spacing:.52px;font-style:normal;color:rgba(0,0,0,.45)}
+.wy-s b{display:block;font-size:clamp(15px,1.2vw,18px);font-weight:450;letter-spacing:-.03em;line-height:1.2;margin:10px 0 6px;color:#000}
+.wy-s span{display:block;font-size:14px;line-height:1.4;letter-spacing:-.02em;color:rgba(0,0,0,.55)}
+.wy-ft{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.wy-btn{display:inline-flex;align-items:center;gap:8px;height:46px;padding:0 24px;border-radius:99px;background:#000;color:#fff;font-size:15px;font-weight:450;letter-spacing:-.02em;text-decoration:none;transition:transform .3s}
+.wy-btn:hover{transform:translateY(-2px)}
+.wy-pr{font-family:var(--mono);font-size:13px;letter-spacing:.52px;text-transform:uppercase;color:rgba(0,0,0,.55)}
+.wy-cd{display:flex;align-items:center;justify-content:center;min-width:0}
+.wy-cd .mc-stage{display:block;width:min(100%,560px);perspective:1000px;transform:rotate(-5deg)}.wy-cd .mc-stage .mc{width:100%}
+@media(max-width:900px){.wy-t{grid-template-columns:1fr;min-height:0}.wy-tx{max-width:none}.wy-cd{order:-1}.wy-s{grid-template-columns:1fr}}
+/*WY-CSS-END*/
 /*DKC-CSS-END*/
 
 </style>
@@ -2386,6 +2517,8 @@ const stepVis=s=>s.img?`<img src="${IMG[s.img]}" alt="">`:mockHTML(s.mock);
 
 const IC=p=>`<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">${p}</svg>`;
 const APPF=[['Sleep','Stages, timing and a nightly score, from the first night.',IC('<path d="M20 14.5A8 8 0 019.5 4 8 8 0 1020 14.5z"/>')],['Recovery','A daily read on how ready the body is for the day.',IC('<path d="M12 21s-7-4.5-7-10a4 4 0 017-2.6A4 4 0 0119 11c0 5.5-7 10-7 10z"/>')],['Movement','Steps, activity and training load, no second device.',IC('<path d="M4 17l4-5 3 3 4-7 5 9"/>')],['Heart rate','Resting rate and variability, tracked around the clock.',IC('<path d="M3 12h4l2-5 4 10 2-5h6"/>')],['Temperature','Skin temperature trends that show before you feel them.',IC('<path d="M14 14.8V5a2 2 0 10-4 0v9.8a4 4 0 104 0z"/>')],['Insights','Plain-language guidance on what changed and what next.',IC('<path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5L18 18M6 18l2.5-2.5M15.5 8.5L18 6"/>')]];
+const APPN=[['Nudges','Real-time, actionable nudges on what to do next.',IC('<path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5L18 18M6 18l2.5-2.5M15.5 8.5L18 6"/>')],['Power naps and breathwork','Suggested to help your recovery.',IC('<path d="M3 12c3-5 6-5 9 0s6 5 9 0"/>')],['Circadian rhythm','Tracking that follows your body clock.',IC('<circle cx="12" cy="12" r="8"/><path d="M12 7v5l3 2"/>')],['Find My Device','Locate the ring if it goes missing.',IC('<path d="M12 21s-6-5.5-6-11a6 6 0 0112 0c0 5.5-6 11-6 11z"/><circle cx="12" cy="10" r="2.2"/>')]];
+const APPX=[['Skin temperature','Monitored 24/7 by a non-contact, medical-grade sensor.',IC('<path d="M14 14.8V5a2 2 0 10-4 0v9.8a4 4 0 104 0z"/>')],['Caffeine Window','Recommends caffeine timings and cut-offs to protect your sleep.',IC('<path d="M5 8h11v6a5 5 0 01-5 5H10a5 5 0 01-5-5V8zM16 10h2a2 2 0 010 4h-2"/>')],['Cycle & Ovulation','Temperature-based ovulation prediction.',IC('<circle cx="12" cy="12" r="8"/><path d="M12 4a8 8 0 010 16"/>')],['Coaching','ACSM-certified performance coaches, at no extra cost.',IC('<path d="M12 3l2.6 5.6 6 .7-4.4 4.1 1.2 6L12 16.5 6.6 19.4l1.2-6L3.4 9.3l6-.7L12 3z"/>')]];
 const PERS=[['The team','One ring each for a team, a launch or a year well done. Pay once, they size and choose.','corporate','Sizing kits','Gift your team'],['The beginner','For the person who never checks their own health. The ring does the tracking.','gift-card','Gift card','Send a gift card'],['The athlete','For the person who trains hard and wants recovery to match the effort.','gift-card','Gift card','Send a gift card'],['Clients and partners','A thank-you they choose for themselves, with no sizing on your side.','vouchers','Vouchers','Send vouchers'],['The night owl','For the person who sleeps late and wakes up tired. The first score shows them why.','gift-card','Gift card','Send a gift card'],['Events and conferences','One code per attendee. No sizing, no shipping, nothing to carry home.','vouchers','Vouchers','Send vouchers']];
 const BN=[['Sleep','Know how you slept','Stages, timing and a nightly score, from the very first night. No setup, no second device.','wide'],['Recovery','Ready, or not','A daily read on how prepared the body is for the day ahead.','tall'],['Movement','Every step counts','Activity and training load, all day.','m'],['Heart rate','Your pulse, always','Resting rate and variability, around the clock.','h'],['Temperature','Early signals','Skin temperature trends before you feel them.','t'],['Insights','What changed, and why','Plain-language guidance on what to do next.','i']];
 const OCZ=[['Birthdays','Another year, marked well'],['Anniversaries','For the years they have shared'],['Weddings','A first gift for a new chapter'],['New parents','Rest and recovery, tracked'],['Graduations','A start worth celebrating'],['Promotions','For the one who earned it'],['Retirements','Time to look after themselves'],['Thank you','Something that says it daily'],['Get well soon','Watch recovery come back'],['Holidays','The gift that outlasts the season']];
@@ -2395,7 +2528,7 @@ const FQ_KB=[
  {k:['discount','bulk','volume','cheaper','price','cost','how much','cheap','offer'],a:'Sizing kits get up to 25% off with volume. Vouchers and gift cards are charged at face value, with no extra fees.'},
  {k:['schedule','date','later','birthday','send','time'],a:'Gift cards can be sent now or scheduled for a date you pick. The email arrives that morning, with a code they can use straight away.'},
  {k:['message','personal','personalise','personalize','design','custom','note'],a:'You can pick a card design for the email and add a personal message. The recipient then chooses their own ring size and finish.'},
- {k:['membership','app','subscription','member'],a:'Every ring comes with the Ultrahuman app, with membership included from day one. Sleep, recovery and movement are read back each morning.'},
+ {k:['membership','app','subscription','member'],a:'Every ring comes with the Ultrahuman app, with no recurring subscription fees for accessing your data.'},
  {k:['team','company','corporate','employees','staff','business','office'],a:'For teams, sizing kits are the most chosen. Order in bulk, share one code per person, and track which ones have been used.'},
  {k:['pay','payment','card','invoice','gst','tax','vat'],a:'You pay once at checkout. Tax is shown before you confirm, and a business tax ID can be added on kit orders.'},
  {k:['hello','hi','hey','thanks','thank'],a:'Hi! Ask me about codes, sizing, delivery, balances or returns.'}
@@ -2444,11 +2577,11 @@ function viewLanding(){
     <div class="dkc" role="region" aria-roledescription="carousel" aria-label="What the gift includes">
      <div class="dkc-w">
       <div class="dkc-tr" tabindex="0">
-       <article class="dkc-s" aria-roledescription="slide" aria-label="1 of 5"></article>
-       <article class="dkc-s" aria-roledescription="slide" aria-label="2 of 5"></article>
-       <article class="dkc-s" aria-roledescription="slide" aria-label="3 of 5"></article>
-       <article class="dkc-s" aria-roledescription="slide" aria-label="4 of 5"></article>
-       <article class="dkc-s" aria-roledescription="slide" aria-label="5 of 5"></article>
+       <article class="dkc-s" aria-roledescription="slide" aria-label="1 of 5"><span class="dks-k">Sleep</span><h3>Wake up to a sleep score</h3><p>An everyday score that shows how well you rested, with awake, REM, light and deep stages and 10+ contributing metrics.</p><div class="dks-v"><div class="dks-ch "><span>Awake</span><span>REM</span><span>Light</span><span>Deep</span></div></div></article>
+       <article class="dkc-s" aria-roledescription="slide" aria-label="2 of 5"><span class="dks-k">Recovery</span><h3>Know when you are ready</h3><p>A real-time Recovery Score drawn from sleep, stress rhythm, skin temperature and HRV, tracked through the day.</p><div class="dks-v"><div class="dks-ch "><span>Sleep</span><span>Stress rhythm</span><span>Skin temperature</span><span>HRV</span></div></div></article>
+       <article class="dkc-s" aria-roledescription="slide" aria-label="3 of 5"><span class="dks-k">Movement</span><h3>Every step counted</h3><p>Step counting, distance, calories and VO2 Max, read in the app next to your sleep and recovery.</p><div class="dks-v"><div class="dks-ch big"><span>Steps</span><span>Distance</span><span>Calories</span><span>VO2 Max</span></div></div></article>
+       <article class="dkc-s" aria-roledescription="slide" aria-label="4 of 5"><span class="dks-k">Heart rate</span><h3>Heart rate and HRV, around the clock</h3><p>Red, green and infrared LEDs read your heart rate, with continuous 24/7 HRV monitoring.</p><div class="dks-v"><div class="dks-ch "><span>Heart rate</span><span>24/7 HRV</span></div></div></article>
+       <article class="dkc-s" aria-roledescription="slide" aria-label="5 of 5"><span class="dks-k">Powerplugs</span><h3>Add more to the app</h3><p>Optional add-ons that extend the app. Some are free, some are paid.</p><div class="dks-v"><div class="dks-ch "><span>Smart Alarm</span><span>Caffeine Window</span><span>Cycle & Ovulation</span><span>Vitamin D</span><span>Phase Alignment</span><span>Cardio Adaptability</span></div></div></article>
       </div>
       <button type="button" class="dkc-ar prev" aria-label="Previous slide" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
       <button type="button" class="dkc-ar next" aria-label="Next slide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
@@ -2456,17 +2589,24 @@ function viewLanding(){
      <div class="dkc-dots"><button type="button" aria-label="Go to slide 1"></button><button type="button" aria-label="Go to slide 2"></button><button type="button" aria-label="Go to slide 3"></button><button type="button" aria-label="Go to slide 4"></button><button type="button" aria-label="Go to slide 5"></button></div>
     </div></section>
 
-  <section class="sec fx">${sh('Inside the app','Everything the ring sees, in one place.','lft')}
-    <div class="fb">
-      <div class="fb-l"><div class="fb-t fb-img gvi fb-vid"><video data-src="assets/emerald-video.webm" muted loop playsinline preload="none" aria-label="Ultrahuman app"></video></div>
-        <div class="fb-cap"><h3>Ultrahuman app</h3></div></div>
-      <div class="fb-r">
-        <div class="fb-t fb-st"><p>Every ring comes with the Ultrahuman app. Sleep, recovery and movement, read back each morning in plain language, with no monthly fee.</p></div>
-        <div class="fb-t fb-num"><span class="e">First score after</span><b>1</b><span class="u">night of wear</span></div>
-        <div class="fb-t fb-ls"><span class="fb-k">A closer look at the app</span>
-          <ul>${APPF.slice(0,4).map(f=>`<li><i>${f[2]}</i><div><b>${f[0]}</b><span>${f[1]}</span></div></li>`).join('')}</ul></div>
-      </div>
-    </div></section>
+  <section class="aseq" id="aseq" aria-label="Inside the app"><div class="as-in">
+    <div class="as-clip"><div class="as-gr"></div><div class="as-g2"></div><div class="as-grp">
+      <div class="as-phone"><div class="as-scr">
+        <div class="as-hd as-i" data-i="0"><span class="as-time">9:41</span><img class="as-cell" alt="" src="__SVG:ua-cell__"><img class="as-wifi" alt="" src="__SVG:ua-wifi__"><i class="as-bat"></i><i class="as-bat2"></i><img class="as-cap" alt="" src="__SVG:ua-cap__"><div class="as-logo"><img alt="" src="__SVG:ua-wordmark__"><img class="as-chev" alt="" src="__SVG:ua-chev__"></div></div>
+        <div class="as-stack">
+          <div class="as-ph"></div>
+          <div class="as-txt as-i" data-i="1"><b>Morning, Ritwik</b><p>Excellent recovery last night! The way you responded under pressure, adapted quickly to the situation.</p></div>
+          <div class="as-tl as-i" data-i="2"><div class="as-bar"><span style="left:0;right:65%"></span><span style="left:38%;right:28%"></span><span style="left:75%;right:0"></span><em></em></div><div class="as-tm"><span><img alt="" src="__SVG:ua-moon__">01:14 AM</span><strong>7H 23M</strong><span><img alt="" src="__SVG:ua-sun__">10:30 AM</span></div></div>
+          <div class="as-sc as-i" data-i="3"><small>Sleep Screener</small><div class="as-card"><div><span><img alt="" src="__SVG:ua-heart__">Cardio adaptibility</span><b class="ok">Normal</b></div><div><span><img alt="" src="__SVG:ua-heart__">Temperature</span><b class="ok">Within range</b></div><div><span><img alt="" src="__SVG:ua-hrbad__">Resting HR</span><b class="bad">Elevated</b></div></div></div>
+        </div>
+      </div></div>
+      <div class="as-halo"></div>
+      <div class="as-orb"><img alt="" src="__JPG:orb__"><span class="as-os">Sleep</span><b class="as-on">91</b></div>
+    </div>
+      <video class="as-v" data-src="assets/emerald-video.webm" muted loop playsinline preload="none" aria-label="Ultrahuman app"></video>
+    </div>
+    <div class="as-h"><h2>Inside the app</h2><p>Everything the ring sees, in one place.</p></div>
+  </div></section>
 
   <section class="sec fx oc2" id="occasions"><div class="oc2-pin"><div class="oc2-w">
       <div class="oc2-lw"><div class="oc2-l" id="oc2l">${OCZ.map((o,i)=>`<button type="button" class="oc2-i${i?'':' a'}" data-i="${i}">${o[0]}</button>`).join('')}</div></div>
@@ -2545,9 +2685,23 @@ function gskSummary(){
     offers:[[BI.ship,'Free shipping on every kit'],[BI.cal,'Codes valid for 6 months'],[BI.ring,'One ring per code']],
     fine:(nb?`Add ${nb.min-q} more for ${nb.pct}% off. `:'')+'Codes are created when you pay. One ring model per order, so for both AIR and PRO place two orders.'});
 }
+function gskCapData(){
+  const q=S.gsk.qty,cur=band(q),nb=nextBand(q),c=BANDS.indexOf(cur),full=rp();
+  const pos=nb?(c+(q-cur.min)/(nb.min-cur.min))/5*100:100;
+  return {c,cur,pct:cur.pct,pos,rng:cur.max===Infinity?cur.min+'+':cur.min+'–'+cur.max,price:fmt(full*(1-cur.pct/100)),list:cur.pct?fmt(full):'',chip:cur.pct?`Saving ${fmt(full*cur.pct/100*q)} · ${cur.pct}% off`:'Order 5+ to start saving',
+   note:nb?`${nb.min-q} more kits · ${fmt(full*(1-nb.pct/100))}`:'Lowest price'};
+}
 function gskBands(){
-  const q=S.gsk.qty,cur=band(q);
-  return BANDS.map((b,i)=>{const on=b===cur,past=b.min<cur.min;const rng=b.max===Infinity?b.min+'+':b.min===b.max?b.min:b.min+'–'+b.max;return `<button class="bp-row bb ${on?'sel on':past?'past':''}" onclick="gskSet(${b.min})" aria-pressed="${on}">${b.min===25?'<em class="bp-pop">POPULAR</em>':''}<span class="bb-n"><b>${rng} kits</b>${b.pct?`<i class="bp-tag">SAVE ${b.pct}%</i>`:''}</span><span class="bp-m">${fmt(rp()*(1-b.pct/100))}</span></button>`}).join('');
+  const d=gskCapData();
+  return `<div class="cap" role="img" aria-label="Progress to the next volume discount"><div class="cap-tr"><i style="width:${d.pos}%"></i>${[1,2,3,4].map(k=>`<u style="left:${k*20}%"></u>`).join('')}</div><div class="cap-tk">${BANDS.map((b,i)=>`<span class="${i<=d.c?'on':''}" style="left:${i*20}%">${b.pct?b.pct+'%':'List'}</span>`).join('')}</div></div>
+  <div class="cap-rows"><div class="cap-r"><span class="cap-l2">Each kit${d.pct?` <i class="bp-tag" id="cap-t">SAVE ${d.pct}%</i>`:' <i class="bp-tag" id="cap-t" hidden></i>'}</span><span class="cap-p"><s id="cap-l">${d.list}</s> <b class="num" id="cap-p">${d.price}</b></span></div>
+  <div class="cap-r"><span class="cap-l2">Next price</span><span class="cap-p"><b class="num" id="cap-n">${d.note}</b></span></div></div>`;
+}
+function gskCapUpd(){
+  const el=$('#gbands');if(!el)return;if(!el.querySelector('.cap')){el.innerHTML=gskBands();return}
+  const d=gskCapData();el.querySelector('.cap-tr i').style.width=d.pos+'%';
+  el.querySelectorAll('.cap-tk span').forEach((e,i)=>e.classList.toggle('on',i<=d.c));
+  $('#cap-p').textContent=d.price;{const t=$('#cap-t');if(t){t.hidden=!d.pct;t.textContent='SAVE '+d.pct+'%'}}$('#cap-l').textContent=d.list;$('#cap-n').textContent=d.note;
 }
 function gskNote(){const q=S.gsk.qty,b=band(q),nb=nextBand(q);return b.pct?`At <b class="num">${q}</b> kits you get <b>${b.pct}% off</b>.${nb?` ${nb.min-q} more unlocks ${nb.pct}%.`:' That is our top band.'}`:`Order <b>5 or more</b> to start saving.`}
 
@@ -2601,8 +2755,25 @@ function bpPage({gal,title,price,payRow,dispatch,pill,secs,sum,note,bar}){
 }
 function bpBelow({box,hiw=''}){
   /* detail pages end with "How it works": the hero banner, stats, details, talk-to-us and FAQ sections are removed */
-  return `<section class="bx"><h2>What’s in the box</h2><div class="bx-c">${box.map(([im,t])=>`<div><div class="bx-i">${im}</div><b>${t}</b></div>`).join('')}</div></section>
-  ${hiw}`;
+  return hiw;
+}
+function viewWays(){
+  const AR='<svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3l5 5-5 5"/></svg>';
+  const T=[
+   {href:'#corporate',tag:'For teams · Most chosen',h:'Gift sizing kits',lead:'Buy in bulk at a volume discount. Everyone sizes themselves at home, then picks their ring.',
+    st:[['Buy in bulk','Up to 25% off with volume.'],['Everyone sizes at home','Kits ship to you in 24 hours.'],['They pick their ring','Each code is valid for 6 months.']],cta:'Build an order',pr:`From <span class="num">${fmt(unit(100))}</span> per kit`,card:mcHTML('au','gold','Gift sizing kit','One ring per code')},
+   {href:'#vouchers',tag:'For teams',h:'Ring vouchers',lead:'Pick a value, get the codes, pass them on. No sizing and no shipping.',
+    st:[['Pick a value','Seven values, up to 50 codes.'],['Share the codes','By message, or download as CSV.'],['They spend it on anything','The balance stays on the code.']],cta:'Explore vouchers',pr:'Up to 50 codes',card:mcHTML('si','rose','Ring voucher','Value $250 · 12 months')},
+   {href:'#gift-card',tag:'For one person',h:'Gift card',lead:'Pay for the ring. They choose their own size and finish.',
+    st:[['You pay for the ring','Full ring price, nothing extra.'],['They get an email','Sent now, or on a date you pick.'],['They choose size and finish','Pick a card design for the email.']],cta:'Send a gift card',pr:'Full ring price',card:mcHTML('sv','silver','Gift card','For Maya Rao · Ring AIR')}];
+  return `${crumb('Three ways to give')}
+  <main class="wy">
+   <header class="wy-h"><h1>Three ways to give</h1><p>One ring at the end of each. Pick the one that fits.</p></header>
+   <div class="wy-g">${T.map(t=>`<section class="wy-t"><div class="wy-tx"><div><span class="wy-tag">${t.tag}</span><h3>${t.h}</h3><p class="wy-lead">${t.lead}</p></div>
+     <div class="wy-how"><span class="wy-tag">How it works</span><div class="wy-s">${t.st.map((x,i)=>`<div><i>0${i+1}</i><b>${x[0]}</b><span>${x[1]}</span></div>`).join('')}</div></div>
+     <div class="wy-ft"><a class="wy-btn" href="${t.href}">${t.cta} ${AR}</a><span class="wy-pr">${t.pr}</span></div></div><div class="wy-cd">${t.card}</div></section>`).join('')}</div>
+  </main>
+  ${footer()}`;
 }
 function viewCorporate(){
   const q=S.gsk.qty,u0=unit(q);
@@ -2616,9 +2787,7 @@ function viewCorporate(){
     pill:`<button class="bp-offer" onclick="goBuilder()"><span>Special pricing for teams of 100 or more</span>${BI.chev}</button>`,
     secs:[
       bpSec('Ring','Choose the model they pick from.',ringRows()),
-      bpSec('Sizing kit','Included with every code.',bpCard(`<img src="${IMG.kit2}" alt="">`,'Sizing Kit','INCLUDED',['Perfect fit - no guess work','Eco-friendly packaging','Easy to share']),'Each person sizes themselves at home, then picks their ring.'),
-      `<section class="bp-sec" id="builder">${bpH('Quantity','How many kits?')}<div class="bp-qty"><button onclick="gskQty(-1)" aria-label="Fewer kits">&minus;</button><input id="gq" type="number" inputmode="numeric" min="1" max="1000" value="${q}" oninput="gskSet(this.value,true)" aria-label="Number of kits"><button onclick="gskQty(1)" aria-label="More kits">+</button></div><div class="bp-chips" id="gchips">${[5,10,25,50,100].map(n=>`<button class="${n===q?'on':''}" onclick="gskSet(${n})">${n}</button>`).join('')}</div></section>`,
-      `<section class="bp-sec">${bpH('Volume discount','The more you give, the less each costs.')}<div class="bp-rows" id="gbands">${gskBands()}</div><p class="bp-hint" id="gnote">${gskNote()}</p>${bpPill('How it works',"openHow('gsk')")}</section>`
+      `<section class="bp-sec" id="builder">${bpH('Quantity','How many kits?')}<div class="bp-qty"><button onclick="gskQty(-1)" aria-label="Fewer kits">&minus;</button><input id="gq" type="number" inputmode="numeric" min="1" max="1000" value="${q}" oninput="gskSet(this.value,true)" aria-label="Number of kits"><button onclick="gskQty(1)" aria-label="More kits">+</button></div><div class="bp-chips" id="gchips">${[5,10,25,50,100].map(n=>`<button class="${n===q?'on':''}" onclick="gskSet(${n})">${n}</button>`).join('')}</div><div id="gbands">${gskBands()}</div></section>`
     ],
     sum:{id:'gsum',html:gskSummary()},
     note:bpNote(`Codes only redeem on the ${st().name} store. One ring per code, delivered to your inbox. <b>How redemption works</b>`),
@@ -2667,9 +2836,9 @@ function gskSet(v,typing){let n=parseInt(v,10);if(isNaN(n)||n<1)n=1;if(n>1000)n=
 function gskQty(d){gskSet(S.gsk.qty+d)}
 function paintGsk(){
   const q=S.gsk.qty,cur=band(q),bi=BANDS.indexOf(cur);
-  $('#gsum').innerHTML=gskSummary();countUp($('#gsum'));$('#gnote').innerHTML=gskNote();
-  document.querySelectorAll('#gbands .bb').forEach((el,i)=>{const b=BANDS[i];el.classList.toggle('on',b===cur);el.classList.toggle('sel',b===cur);el.classList.toggle('past',b.min<cur.min);el.setAttribute('aria-pressed',b===cur)});
-  if(S._bi!==undefined&&bi>S._bi&&cur.pct){const el=document.querySelector('#gbands .bb.on');if(el){const r=el.getBoundingClientRect();confetti(r.left+r.width/2,r.top+8,22,['#112BAF','#8fb0ff','#ffffff','#0B7A4B'],.7)}}
+  $('#gsum').innerHTML=gskSummary();countUp($('#gsum'));{const gn=$('#gnote');if(gn)gn.innerHTML=gskNote()}
+  gskCapUpd()
+  if(S._bi!==undefined&&bi>S._bi&&cur.pct){const el=document.querySelector('#gbands .vd-c.on');if(el){const r=el.getBoundingClientRect();confetti(r.left+r.width/2,r.top+8,22,['#112BAF','#8fb0ff','#ffffff','#0B7A4B'],.7)}}
   S._bi=bi;{const bp=$('#bprice');if(bp)bp.textContent=fmt(unit(q)*q)}
   document.querySelectorAll('#gchips button').forEach(b=>b.classList.toggle('on',parseInt(b.textContent)===q));paintBar();paintSub();
 }
@@ -2979,7 +3148,7 @@ document.addEventListener('click',e=>{
 /* =====================================================================
    ROUTER / CHROME
    ===================================================================== */
-const ROUTES={'':viewLanding,gifting:viewLanding,shop:viewShop,corporate:viewCorporate,vouchers:viewVouchers,'gift-card':viewGift,checkout:viewCheckout,success:viewSuccess,redeem:viewRedeem};
+const ROUTES={'':viewLanding,gifting:viewLanding,ways:viewWays,shop:viewShop,corporate:viewCorporate,vouchers:viewVouchers,'gift-card':viewGift,checkout:viewCheckout,success:viewSuccess,redeem:viewRedeem};
 const route=()=>location.hash.replace(/^#\/?/,'');
 const SC={},scKey=r=>(r===''||r==='gifting')?'lp':r;
 const BAR={corporate:()=>({s:`${S.gsk.qty} kits${band(S.gsk.qty).pct?' · '+band(S.gsk.qty).pct+'% off':''}`,t:fmt(unit(S.gsk.qty)*S.gsk.qty),b:'Buy now',f:'buyGsk()'}),
@@ -3206,31 +3375,7 @@ scan();new MutationObserver(()=>requestAnimationFrame(scan)).observe(document.bo
 
 
 /*MC-JS-END*/
-/*HXL-JS*/
-/* no scrolling until the hero card animation has finished */
-(function(){
- const R=document.documentElement;let busy=null;
- const reduce=()=>window.matchMedia&&matchMedia('(prefers-reduced-motion:reduce)').matches;
- function unlock(){R.classList.remove('hxlock');busy=null}
- function arm(hx){
-  if(busy===hx||hx._l||reduce()||scrollY>60)return;hx._l=1;busy=hx;R.classList.add('hxlock');
-  const hxw=hx.closest('.hxw')||hx,t0=performance.now();
-  (function wait(){
-   if(!hx.isConnected){unlock();return}
-   if(!hx.classList.contains('go')){if(performance.now()-t0>9000)return unlock();return setTimeout(wait,80)}
-   setTimeout(()=>{
-    const an=document.getAnimations().filter(a=>{try{return hxw.contains(a.effect.target)&&!a.effect.target.matches('.hz-g,.hz-i,.hz-n')&&a.effect.getTiming().iterations!==Infinity}catch(e){return false}});
-    Promise.allSettled(an.map(a=>a.finished)).then(()=>setTimeout(unlock,250));
-    setTimeout(unlock,9000);
-   },120);
-  })();
- }
- function scan(){const hx=document.querySelector('.hx');if(hx)arm(hx);else if(busy)unlock()}
- new MutationObserver(scan).observe(document.getElementById('app')||document.body,{childList:true,subtree:false});
- addEventListener('hashchange',()=>{if(location.hash&&location.hash!=='#'&&location.hash!=='#gifting')unlock()});
- scan();
-})();
-/*HXL-JS-END*/
+
 /*SS-JS*/
 /* inertial wheel scrolling: one shared glide for the whole page so every section moves at the same pace */
 (function(){
@@ -3245,6 +3390,7 @@ scan();new MutationObserver(()=>requestAnimationFrame(scan)).observe(document.bo
   scrollTo({top:cur,behavior:'instant'});
   raf=cur===tgt?0:requestAnimationFrame(step);
  }
+ window.__ssReset=()=>{cancelAnimationFrame(raf);raf=0;cur=tgt=scrollY};
  addEventListener('wheel',e=>{
   if(e.ctrlKey||e.defaultPrevented||R.classList.contains('hxlock')||Math.abs(e.deltaX)>Math.abs(e.deltaY)||inner(e.target,e.deltaY))return;
   let dy=e.deltaY;if(e.deltaMode===1)dy*=34;else if(e.deltaMode===2)dy*=innerHeight;
@@ -3277,6 +3423,103 @@ scan();new MutationObserver(()=>requestAnimationFrame(scan)).observe(document.bo
  new MutationObserver(scan).observe(document.body,{childList:true,subtree:true});scan();
 })();
 /*DKC-JS-END*/
+/*AS-JS*/
+(function(){
+ try{history.scrollRestoration='manual'}catch(e){}/* a refresh starts at the top, so the intro sequence replays */
+ const RM=window.matchMedia&&matchMedia('(prefers-reduced-motion:reduce)').matches;
+ const cl=(x,a=0,b=1)=>Math.min(b,Math.max(a,x)),E=(x,a,b)=>cl((x-a)/(b-a)),ez=t=>t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2,L=(a,b,t)=>a+(b-a)*t;
+ let ticking=0,best=0;/* scrolling back rewinds the intro until the video opens; after that it stays put until a refresh */
+ function init(){
+  const sec=document.getElementById('aseq');if(!sec||sec._i)return;sec._i=1;
+  const q=s=>sec.querySelector(s),st=q('.as-in'),clip=q('.as-clip'),grp=q('.as-grp'),orb=q('.as-orb'),gr=q('.as-gr'),g2=q('.as-g2'),ph=q('.as-phone'),os=q('.as-os'),on=q('.as-on'),vid=q('.as-v'),hd=q('.as-h'),
+   its=[...sec.querySelectorAll('.as-i')];
+  let vOn=false;
+  let cur=0,last=0;
+  const target=()=>{const r=sec.getBoundingClientRect(),tot=Math.max(1,sec.offsetHeight-st.clientHeight);
+   const raw=RM?1:cl((((parseFloat(getComputedStyle(st).top)||0)-r.top)/tot)/.86);return best===1?1:raw};
+  function done(){
+   if(sec.classList.contains('as-done'))return;
+   const navh=parseFloat(getComputedStyle(st).top)||0,r=sec.getBoundingClientRect(),above=r.bottom<navh,a=above?sec.nextElementSibling:st;
+   const before=a.getBoundingClientRect().top;sec.classList.add('as-done');
+   const after=a.getBoundingClientRect().top;if(after!==before){scrollTo({top:scrollY+(after-before),behavior:'instant'});if(window.__ssReset)window.__ssReset()}
+  }
+  function tick(t){
+   ticking=0;const dt=Math.min(64,t-(last||t));last=t;const tg=target();
+   cur+=(tg-cur)*(1-Math.exp(-dt/420));if(Math.abs(tg-cur)<.0006)cur=tg;
+   if(cur>=.9)best=1;/* locks only once the video has opened */
+   render(cur);
+   if(cur!==tg){ticking=1;requestAnimationFrame(tick)}else{last=0;if(cur>=.985)done()}
+  }
+  let G=null,gWas=true;
+  function measure(){
+   /* the card is always exactly 16:9; if the screen is short the stage grows to hold it */
+   const cgp=parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--cg'))||10,bl=cgp,br=st.clientWidth-cgp,bt=hd.offsetTop+hd.offsetHeight+28,bh=(br-bl)*9/16;
+   st.style.minHeight=Math.ceil(bt+bh+24)+'px';
+   const W=st.clientWidth,H=st.clientHeight,mob=W<760;
+   const u=mob?Math.min(W/560,H/982):Math.min(W/1512,H/982),ox=(W-1512*u)/2,oy=(H-982*u)/2;
+   G={W,H,mob,u,ox,oy,cxp:ox+756*u,cyp:oy+490*u,R:80*u,B:[bl,bt,br,bt+bh]};gWas=true;
+  }
+  function render(p){
+   if(!G||G.W!==st.clientWidth||G.H!==st.clientHeight)measure();
+   const {W,H,u,ox,oy,cxp,cyp,R,B}=G;
+   /* a soft blue gradient rises from the bottom edge, then pulls in on itself and condenses into the orb: no box, no outline */
+   const ge=E(p,0,.26),gi=1-Math.pow(1-ge,2.2),m=ez(E(p,.16,.40)),sw=ez(E(p,.34,.44)),oi=ez(E(p,.36,.48));
+   const A=gi*(1-sw*.55)*(1-oi),gAct=p<.5;
+   /* four overlapping soft blobs with gaussian fall-off: no edges, no seams. They rise at slightly different speeds, then pull into one point */
+   const gs=(c,al)=>{let o='';for(let k=0;k<=12;k++){const t=k/12;o+=`rgba(${c},${(al*Math.exp(-Math.pow(t*2.2,2))).toFixed(4)}) ${(t*100).toFixed(1)}%,`}return o+`rgba(${c},0) 100%`};
+   const lay=[
+    {c:'140,190,255',a:.75,rx:1.0*W,ry:.4*H,ex:1.7*R,ey:1.7*R,k:0,fade:.9},
+    {c:'96,152,255',a:.85,rx:.5*W,ry:.64*H,ex:1.7*R,ey:1.7*R,k:1,fade:.2},
+    {c:'24,84,236',a:1,rx:.3*W,ry:.74*H,ex:1.2*R,ey:1.2*R,k:2,fade:0},
+    {c:'8,32,108',a:1,rx:.17*W,ry:.52*H,ex:.7*R,ey:.62*R,k:3,fade:0},
+    {c:'96,152,255',a:.8,rx:.46*W,ry:.62*H,ex:1.5*R,ey:1.5*R,k:4,fade:.4,sx:-.04},
+    {c:'96,152,255',a:.8,rx:.46*W,ry:.62*H,ex:1.5*R,ey:1.5*R,k:5,fade:.4,sx:1.04}];
+   if(gAct||gWas){gr.style.background=lay.map((l,i)=>{
+    const mi=ez(E(p,.16+.012*i,.40));
+    const rise=L(H*(1.3+.03*i),H*.94,gi);
+    const sway=Math.sin(p*14+i*1.7)*W*.018*(1-mi);
+    const cx=L(l.sx!==undefined?W*l.sx+sway:cxp+sway,cxp,mi),cy=L(rise,cyp,mi);
+    const rx=L(l.rx,l.ex,mi),ry=L(l.ry,l.ey,mi);
+    return `radial-gradient(ellipse ${rx.toFixed(1)}px ${ry.toFixed(1)}px at ${cx.toFixed(1)}px ${cy.toFixed(1)}px,${gs(l.c,A*l.a*(1-mi*l.fade))})`}).join(',');
+   Object.assign(g2.style,{left:(cxp-R)+'px',top:(cyp-R)+'px',width:(2*R)+'px',height:(2*R)+'px',opacity:sw*(1-oi),filter:`blur(${(1-sw)*10}px)`,boxShadow:`0 ${5.8*u}px ${12.7*u}px rgba(0,0,0,${.35*sw})`});
+   gWas=gAct;}
+   orb.style.opacity=oi;{const bl2=(1-ez(E(p,.36,.50)))*14;orb.style.filter=bl2<.05?'none':`blur(${bl2.toFixed(2)}px)`}orb.style.transform='none';st.style.setProperty('--sh',oi.toFixed(3));
+   /* phone fades up around the orb */
+   const out=1-ez(E(p,.86,.94)),pr0=ez(E(p,.44,.58)),pp=pr0*out;ph.style.opacity=pp;ph.style.transform=`translateY(${(1-pr0)*40}px) scale(${.97+.03*pr0})`;
+   its.forEach(e=>{const i=+e.dataset.i,o=ez(E(p,.46+.025*i,.56+.025*i));e.style.opacity=o;e.style.transform=`translateY(${(1-o)*18}px)`});
+   const so=ez(E(p,.50,.58))*out;os.style.opacity=so;on.style.opacity=so;orb.style.opacity=oi*out;on.textContent=Math.round(91*ez(E(p,.52,.62)));
+   /* the grey background shrinks into a card */
+   const c1=ez(E(p,.60,.80));
+   const AA=[0,0,W,H];
+   const rc=AA.map((a,i)=>L(a,B[i],c1)),rad=L(0,32,c1);
+   clip.style.clipPath=`inset(${rc[1]}px ${W-rc[2]}px ${H-rc[3]}px ${rc[0]}px round ${rad}px)`;
+   grp.style.left=L(ox+756*u,(B[0]+B[2])/2,c1)+'px';grp.style.top=L(oy+490*u,(B[1]+B[3])/2,c1)+'px';grp.style.transform=`scale(${u*(1-.15*c1)})`;
+   /* then the film plays in the card */
+   Object.assign(vid.style,{left:(B[0]-2)+'px',top:(B[1]-2)+'px',width:(B[2]-B[0]+4)+'px',height:(B[3]-B[1]+4)+'px'});
+   const vo=ez(E(p,.86,.97));vid.style.opacity=vo;{const ho=ez(E(p,.88,.99));hd.style.opacity=ho;hd.style.transform=`translateY(${(1-ho)*12}px)`}
+   if(vo>0&&!vOn){vOn=true;if(!vid.src&&vid.dataset.src)vid.src=vid.dataset.src;vid.currentTime=0;const pr=vid.play();if(pr&&pr.catch)pr.catch(()=>{})}
+  }
+  const DBG=new URLSearchParams(location.search).get('asp');
+  const kick=()=>{if(DBG!==null)return;if(!ticking){ticking=1;requestAnimationFrame(tick)}};
+  addEventListener('scroll',kick,{passive:true});addEventListener('resize',()=>{G=null;kick()});
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(()=>{G=null;kick()});
+  if(DBG!==null){document.documentElement.classList.add('asdbg');const pv=Math.min(1,Math.max(0,+DBG));measure();{const vt=new URLSearchParams(location.search).get('vt');if(vt!==null){vid.muted=true;vid.src=vid.dataset.src;vid.addEventListener('loadedmetadata',()=>{vid.currentTime=+vt},{once:true})}}cur=pv;if(pv>=.9)best=1;if(pv>=.985)sec.classList.add('as-done');render(pv)}
+  if(RM){cur=1}kick();
+ }
+ function scan(){const e=document.getElementById('aseq');if(e&&!e._i)init()}
+ scan();new MutationObserver(()=>requestAnimationFrame(scan)).observe(document.body,{childList:true,subtree:true});
+})();
+/*AS-JS-END*/
+/*ONLY-JS*/
+/* ?only=N shows just the Nth block of the landing page (used for exporting stills) */
+(function(){const Q=new URLSearchParams(location.search),sy=Q.get('sy');if(sy!==null)addEventListener('load',()=>setTimeout(()=>scrollTo({top:+sy,behavior:'instant'}),900));const o=Q.get('only');if(o===null)return;
+ const app=document.getElementById('app');if(!app)return;
+ const apply=()=>{[...app.children].forEach((e,i)=>{e.style.display=(i===+o)?'':'none'})};
+ apply();new MutationObserver(apply).observe(app,{childList:true});
+})();
+/*ONLY-JS-END*/
+
+
 /*HX-JS*/
 /* start the hero intro only once every card has drawn, then run the light sweep across the gold card */
 (function(){
