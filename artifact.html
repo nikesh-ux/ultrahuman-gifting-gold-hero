@@ -2170,7 +2170,7 @@ html body[data-lp] .sec.fx.dk:not(#paths){position:sticky!important;top:var(--dk
 #mbar,#prog{display:none!important}
 .dkc{margin-top:clamp(28px,3vw,48px)}
 .dkc-w{position:relative}
-.dkc-tr{display:flex;gap:16px;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scrollbar-width:none;margin-inline:calc(var(--gut)*-1);padding-inline:var(--cg,10px);scroll-padding-inline:var(--cg,10px);overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch}
+.dkc-tr{display:flex;gap:16px;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scrollbar-width:none;margin-inline:calc(var(--gut)*-1);padding-inline:var(--gut);scroll-padding-inline:var(--gut);overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch}
 .dkc-tr::-webkit-scrollbar{display:none}
 .dkc-tr:focus-visible{outline:2px solid rgba(255,255,255,.5);outline-offset:4px;border-radius:28px}
 .dkc-s{flex:0 0 calc((100vw - var(--gut)*2)*.45);scroll-snap-align:start;box-sizing:border-box;min-height:clamp(360px,54svh,520px);background:#161616;border-radius:28px}
@@ -3455,7 +3455,7 @@ scan();new MutationObserver(()=>requestAnimationFrame(scan)).observe(document.bo
   let G=null,gWas=true;
   function measure(){
    /* the card is always exactly 16:9; if the screen is short the stage grows to hold it */
-   const cgp=parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--cg'))||10,bl=cgp,br=st.clientWidth-cgp,bt=hd.offsetTop+hd.offsetHeight+28,bh=(br-bl)*9/16;
+   const bl=hd.offsetLeft,br=bl+hd.offsetWidth,bt=hd.offsetTop+hd.offsetHeight+28,bh=(br-bl)*9/16;
    st.style.minHeight=Math.ceil(bt+bh+24)+'px';
    const W=st.clientWidth,H=st.clientHeight,mob=W<760;
    const u=mob?Math.min(W/560,H/982):Math.min(W/1512,H/982),ox=(W-1512*u)/2,oy=(H-982*u)/2;
@@ -3473,9 +3473,7 @@ scan();new MutationObserver(()=>requestAnimationFrame(scan)).observe(document.bo
     {c:'140,190,255',a:.75,rx:1.0*W,ry:.4*H,ex:1.7*R,ey:1.7*R,k:0,fade:.9},
     {c:'96,152,255',a:.85,rx:.5*W,ry:.64*H,ex:1.7*R,ey:1.7*R,k:1,fade:.2},
     {c:'24,84,236',a:1,rx:.3*W,ry:.74*H,ex:1.2*R,ey:1.2*R,k:2,fade:0},
-    {c:'8,32,108',a:1,rx:.17*W,ry:.52*H,ex:.7*R,ey:.62*R,k:3,fade:0},
-    {c:'96,152,255',a:.8,rx:.46*W,ry:.62*H,ex:1.5*R,ey:1.5*R,k:4,fade:.4,sx:-.04},
-    {c:'96,152,255',a:.8,rx:.46*W,ry:.62*H,ex:1.5*R,ey:1.5*R,k:5,fade:.4,sx:1.04}];
+    {c:'8,32,108',a:1,rx:.17*W,ry:.52*H,ex:.7*R,ey:.62*R,k:3,fade:0}];
    if(gAct||gWas){gr.style.background=lay.map((l,i)=>{
     const mi=ez(E(p,.16+.012*i,.40));
     const rise=L(H*(1.3+.03*i),H*.94,gi);
