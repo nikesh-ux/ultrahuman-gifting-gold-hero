@@ -2163,9 +2163,6 @@ body:has(.hxw.gc) header.nav:not(.scrolled) .uE8frq_trigger:hover{background:rgb
  .hxw.gc .gc-top{top:23svh;gap:0}
  .gc-top .h .a{font-size:clamp(20px,6vw,28px);line-height:1.1;letter-spacing:-.01em;margin-top:0!important;height:auto;width:auto}
  .gc-top .h .b{font-size:clamp(46px,14.9vw,66px);line-height:1;letter-spacing:-.03em;margin-top:2px!important;height:auto;width:auto}
- .aseq.as-done{padding-bottom:16px}
- .aseq.as-done{display:flow-root}
- .aseq.as-done .as-in{height:auto!important;min-height:0;margin-top:calc(var(--mpad,0px)*-1)}
  .oc2-pin{align-items:flex-start}
  .oc2-w{padding-top:clamp(48px,12vw,64px)}
  html body[data-lp] .gs:not(#paths) .gpanel .gvis,html body[data-lp] .gs:not(#paths) .gpanel.rev .gvis{order:-1!important}
@@ -2181,6 +2178,38 @@ body:has(.hxw.gc) header.nav:not(.scrolled) .uE8frq_trigger:hover{background:rgb
  .gc-ray{width:calc(var(--f)*1300);height:calc(var(--f)*600)}
 }
 /*DSK-CSS-END*/
+/*HW-CSS*/
+/* "how it works" reading sheet: one calm column, big thin title, an image per step with a gold numbered timeline */
+html body:not(#rc1):not(#rc2) :is(.hw2,.sheet-head) img{visibility:visible!important}
+.sheet:has(.hw2){background:#f6f2ea}
+.sheet:has(.hw2) .sheet-head{background:rgba(246,242,234,.92)}
+.hw2{max-width:820px;margin:0 auto;padding:clamp(48px,7vw,112px) clamp(20px,5vw,40px) clamp(56px,8vw,112px)}
+.hw-k{font-family:'Geist Mono',var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#b08d3c}
+.hw-kd{display:block;margin-bottom:clamp(20px,2.4vw,32px);color:#9a8a62}
+.hw2-top{text-align:center}
+.hw2-top h2{margin:clamp(14px,2vw,22px) auto 0;font-weight:300;font-size:clamp(34px,5.2vw,64px);line-height:1.02;letter-spacing:-.05em;color:#1d1a14;text-wrap:balance;max-width:12em}
+.hw2-top p{margin:clamp(16px,2vw,24px) auto 0;max-width:540px;font-size:clamp(16px,1.4vw,19px);line-height:1.55;color:#6f6a5e;letter-spacing:-.02em}
+.hw-badge{display:inline-block;margin-top:20px;font-family:'Geist Mono',var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#b08d3c;border:1px solid #d9c791;border-radius:99px;padding:8px 14px}
+.hw2-steps{margin-top:clamp(44px,6vw,88px);display:grid;gap:clamp(48px,6vw,88px)}
+.hw2-vs{border-radius:28px;overflow:hidden;aspect-ratio:790/410;background:#d8cfbd;position:relative;box-shadow:0 30px 60px -34px rgba(60,44,14,.45)}
+.hw2-vs>img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 1.6s cubic-bezier(.2,.7,.2,1)}
+.hw2-st:hover .hw2-vs>img{transform:scale(1.035)}
+.hw2-tl{display:grid;grid-template-columns:44px 1fr;gap:clamp(16px,2vw,24px);margin-top:clamp(24px,3vw,36px);position:relative}
+.hw2-n{width:42px;height:42px;border-radius:50%;border:1px solid #d6bf86;background:#f6f2ea;color:#b08d3c;display:grid;place-items:center;font-size:16px;position:relative;z-index:1;font-family:'Geist Mono',var(--mono)}
+.hw2-st:not(:last-child) .hw2-tl::before{content:"";position:absolute;left:21px;top:42px;bottom:calc(clamp(48px,6vw,88px)*-1 - 8px);width:1px;background:linear-gradient(#d6bf86,rgba(214,191,134,.15))}
+.hw2-tx h3{margin:6px 0 0;font-size:clamp(22px,2.2vw,30px);font-weight:400;letter-spacing:-.04em;line-height:1.15;color:#1d1a14}
+.hw2-tx p{margin:10px 0 0;max-width:36em;color:#6f6a5e;font-size:clamp(15px,1.15vw,17px);line-height:1.65;letter-spacing:-.012em}
+.hw2-tc{margin-top:clamp(64px,8vw,120px);padding-top:clamp(28px,3vw,40px);border-top:1px solid rgba(60,44,14,.14)}
+.hw2-tc ol{margin:0;padding:0;list-style:none;counter-reset:t;display:grid}
+.hw2-tc li{counter-increment:t;display:grid;grid-template-columns:36px 1fr;gap:6px;padding:14px 0;border-top:1px solid rgba(60,44,14,.1);font-size:14px;line-height:1.6;color:#5a554a}
+.hw2-tc li:first-child{border-top:0}
+.hw2-tc li::before{content:counter(t,decimal-leading-zero);font-family:'Geist Mono',var(--mono);font-size:11px;letter-spacing:.06em;color:#b08d3c;padding-top:3px}
+.hw2-tc a{color:#1d1a14;text-decoration:underline}
+.rvh{opacity:0;transform:translateY(32px);transition:opacity .9s ease,transform 1s cubic-bezier(.2,.8,.2,1)}
+.rvh.in{opacity:1;transform:none}
+@media(max-width:900px){.sheet-head{padding:12px 14px;gap:10px}.sheet-head .pthumb b{max-width:96px}.sheet-head .rt{margin-right:40px}.sheet-head .rt .btn{height:38px;padding:0 16px;font-size:13px}.hw2-vs{border-radius:22px}.hw2-tl{grid-template-columns:40px 1fr}.hw2-n{width:38px;height:38px}.hw2-st:not(:last-child) .hw2-tl::before{left:19px;top:38px}}
+@media(prefers-reduced-motion:reduce){.rvh{opacity:1;transform:none;transition:none}}
+/*HW-CSS-END*/
 /*FQD-CSS*/
 /* FAQ: dark two-column list, every answer open (matches the Ring PRO buy page) */
 html body #faq.fqd{background:#000;box-shadow:0 0 0 100vmax #000;clip-path:inset(0 -100vmax);color:#fff;padding:clamp(80px,10.4vw,150px) 0;margin:0}
@@ -2268,59 +2297,7 @@ html body[data-lp] .sec.fx.dk:not(#paths){position:sticky!important;top:var(--dk
 .cap-p b{font-family:var(--bp-mono);font-weight:500;font-size:16px;letter-spacing:-.04em;font-feature-settings:"lnum","tnum"}
 .cap-p s{font-family:var(--bp-mono);font-size:13px;color:rgba(0,0,0,.35);letter-spacing:-.04em}
 /*VD-CSS-END*/
-/*AS-CSS*/
-html.asdbg #app>*:not(#aseq),html.asdbg header.nav,html.asdbg #mbar,html.asdbg #prog,html.asdbg .bbar2{display:none!important}
-html.asdbg .aseq{height:100vh!important}html.asdbg .as-in{position:relative!important;top:0!important;height:100vh!important;min-height:0!important}
-.aseq{position:relative;height:820svh;background:#fff}.aseq.as-done{height:auto;padding-bottom:clamp(96px,12vw,200px)}.aseq.as-done .as-in{position:relative;top:0}
-.as-nb{display:block;position:sticky;top:0;height:var(--navh,65px);margin-bottom:calc(var(--navh,65px)*-1);background:#f5f5f5;pointer-events:none}.aseq.as-done .as-nb,html.asdbg .as-nb{display:none}
-.as-in{position:sticky;top:var(--navh,65px);height:calc(100svh - var(--navh,65px));overflow:hidden;--sh:0}
-.as-clip{position:absolute;inset:0;background:#f5f5f5;clip-path:inset(0 0 0 0 round 0);will-change:clip-path}
-.as-grp{position:absolute;left:0;top:0;width:0;height:0;transform-origin:0 0;will-change:transform}
-.as-gr{position:absolute;inset:0;opacity:1;pointer-events:none;will-change:background}
-.as-g2{position:absolute;left:0;top:0;width:0;height:0;border-radius:50%;background:radial-gradient(circle at 38% 30%,#5aa2ff 0%,#2467f2 42%,#0b2a7a 100%);opacity:0;pointer-events:none;will-change:opacity,filter}
-.as-halo{position:absolute;left:-150px;top:-150px;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(40,110,255,.55),rgba(40,110,255,0) 65%);opacity:0;will-change:opacity,transform}
-.as-orb{position:absolute;left:-80.5px;top:-80px;width:161px;height:160px;border-radius:50%;overflow:hidden;box-shadow:0 5.79px 12.74px rgba(0,0,0,calc(.35*var(--sh)));opacity:0;will-change:transform,opacity,filter;background:#0d2a6b}
-.as-orb img{position:absolute;inset:-3%;width:106%;height:106%;max-width:none;object-fit:cover}
-.as-os{position:absolute;left:0;right:0;top:46px;text-align:center;font-family:'JetBrains Mono',var(--mono);font-size:10.7px;font-weight:500;letter-spacing:0;text-transform:uppercase;color:#fff;opacity:0}
-.as-on{position:absolute;left:0;right:0;top:62px;text-align:center;font-family:'JetBrains Mono',var(--mono);font-size:48px;font-weight:400;line-height:47px;color:#fff;opacity:0;font-variant-numeric:tabular-nums}
-.as-phone{position:absolute;left:-211px;top:-207px;width:425px;height:1500px;border-radius:40px;background:rgba(177,177,177,.1);box-shadow:0 4px 54.5px rgba(0,0,0,.08);overflow:hidden;opacity:0;will-change:opacity,transform}
-.as-scr{position:absolute;left:11.5px;top:11px;width:402px;height:1500px;border-radius:32px;background:#f5f5f5;overflow:hidden}
-.as-i{will-change:opacity,transform}
-.as-hd{position:absolute;left:0;top:0;width:402px;height:104px}
-.as-time{position:absolute;left:26px;top:15px;width:54px;text-align:center;font:590 17px/22px -apple-system,'SF Pro',Inter,sans-serif;color:#000}
-.as-hd img{position:absolute;max-width:none}
-.as-cell{left:294px;top:20px;width:20px;height:12px}.as-wifi{left:321px;top:20px;width:17.5px;height:12px}
-.as-bat{position:absolute;left:348px;top:19.3px;width:25px;height:13px;border:1px solid #000;border-radius:3.5px;opacity:.35}
-.as-bat2{position:absolute;left:350px;top:21.3px;width:21px;height:9px;border-radius:1.3px;background:#000}
-.as-cap{left:374.6px;top:24px;width:1.4px;height:4px}
-.as-logo{position:absolute;left:135.7px;top:72px;display:flex;align-items:center;gap:4px}
-.as-logo img{position:static;display:block}.as-logo img:first-child{width:121px;height:11px}.as-chev{width:24px;height:24px}
-.as-stack{position:absolute;left:19px;top:116px;width:364px;display:flex;flex-direction:column;align-items:center;gap:32px}
-.as-ph{width:161px;height:160px}
-.as-txt{display:flex;flex-direction:column;align-items:center;text-align:center;gap:4px;color:#000;letter-spacing:-.4px}
-.as-txt b{font:500 17px/24px -apple-system,'SF Pro',Inter,sans-serif}
-.as-txt p{margin:0;font:400 14px/20px -apple-system,'SF Pro',Inter,sans-serif;width:364px}
-.as-tl{margin-top:-16px;width:366px;display:flex;flex-direction:column;gap:2px;padding:0 30px}
-.as-bar{position:relative;height:5px;width:290px;margin:4px auto 0}
-.as-bar::before{content:"";position:absolute;left:-32px;right:-32px;top:1px;height:3px;border-radius:9px;background:linear-gradient(90deg,transparent,rgba(0,0,0,.024) 10%,rgba(0,0,0,.3) 90%,rgba(0,0,0,.024))}
-.as-bar span{position:absolute;top:0;height:5px;border-radius:9px;background:#000;box-shadow:0 0 2px rgba(255,255,255,.5)}
-.as-bar em{position:absolute;left:-8px;top:0;width:6px;height:6px;border-radius:50%;background:#000}
-.as-tm{position:relative;display:flex;justify-content:space-between;align-items:flex-start;width:360px;margin:6px 0 0 -30px;font-family:'JetBrains Mono',var(--mono);font-size:12px;line-height:16px;color:rgba(23,23,23,.8)}
-.as-tm span{display:flex;align-items:center;gap:2px}.as-tm img{width:10px;height:10px;display:block}
-.as-tm strong{position:absolute;left:0;right:0;top:12px;text-align:center;font-size:16px;line-height:24px;font-weight:700;color:#141414;text-transform:uppercase}
-.as-sc{display:flex;flex-direction:column;align-items:center;gap:12px;margin-top:6px}
-.as-sc small{font-family:'JetBrains Mono',var(--mono);font-size:13px;line-height:18px;font-weight:500;text-transform:uppercase;color:#a1a1aa}
-.as-card{width:370px;background:#fff;border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:12px}
-.as-card>div{display:flex;justify-content:space-between;align-items:center;font-family:'JetBrains Mono',var(--mono);font-size:14px;line-height:20px;font-weight:500;text-transform:uppercase;white-space:nowrap}
-.as-card span{display:flex;align-items:center;gap:4px;color:#171717}.as-card span img{width:14px;height:14px}
-.as-card b{font-weight:500}.as-card .ok{color:#0eaf5d}.as-card .bad{color:#dc2a6e}
-.as-h{position:absolute;left:var(--gut);right:var(--gut);top:clamp(56px,9vh,104px);padding:0;max-width:1424px;margin:0 auto;opacity:0;pointer-events:none;will-change:opacity,transform;z-index:3}
-.as-h h2,.as-h p{margin:0;font-size:clamp(28px,2.5vw,40px);line-height:1.2;letter-spacing:-1px;font-weight:400}
-.as-h h2{color:#000}.as-h p{color:rgba(0,0,0,.4)}
-.aseq.as-done .as-h{opacity:1!important;transform:none!important}
-.as-v{position:absolute;opacity:0;object-fit:cover;pointer-events:none;will-change:opacity;transform:scale(1.012)}
-@media(prefers-reduced-motion:reduce){.aseq{height:auto}.as-in{position:relative}}
-/*AS-CSS-END*/
+
 /*RC-CSS*/
 /* one corner radius for every card on every page, the same as the video card */
 :root{--rc:32px;--cg:10px}
@@ -2328,7 +2305,6 @@ html body:not(#rc1):not(#rc2) :is(.gpanel,.dkc-s,.bp-gal,.bgal,.bp-sum,.bp-card,
 html body:not(#rc1):not(#rc2) .gpanel .gvis{border-radius:calc(var(--rc) - 16px)!important}
 /*FT-CSS*/
 /* the intro section is a plain white block: no full-bleed shadow or clip, which left a hairline at its bottom edge */
-html body:not(#rc1):not(#rc2) #aseq{box-shadow:none!important;clip-path:none!important}
 /* the occasions image has no box: its edges dissolve into the page */
 html body:not(#rc1):not(#rc2) .oc2-f{border-radius:0!important;background:none!important;box-shadow:none!important;overflow:visible!important;
  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 16%,#000 84%,transparent 100%),linear-gradient(180deg,transparent 0,#000 20%,#000 62%,transparent 100%);
@@ -2621,36 +2597,19 @@ function viewLanding(){
     <div class="dkc" role="region" aria-roledescription="carousel" aria-label="What the gift includes">
      <div class="dkc-w">
       <div class="dkc-tr" tabindex="0">
-       <article class="dkc-s" aria-roledescription="slide" aria-label="1 of 5"><span class="dks-k">Sleep</span><h3>Wake up to a sleep score</h3><p>An everyday score that shows how well you rested, with awake, REM, light and deep stages and 10+ contributing metrics.</p></article>
-       <article class="dkc-s" aria-roledescription="slide" aria-label="2 of 5"><span class="dks-k">Recovery</span><h3>Know when you are ready</h3><p>A real-time Recovery Score drawn from sleep, stress rhythm, skin temperature and HRV, tracked through the day.</p></article>
-       <article class="dkc-s" aria-roledescription="slide" aria-label="3 of 5"><span class="dks-k">Movement</span><h3>Every step counted</h3><p>Step counting, distance, calories and VO2 Max, read in the app next to your sleep and recovery.</p></article>
-       <article class="dkc-s" aria-roledescription="slide" aria-label="4 of 5"><span class="dks-k">Heart rate</span><h3>Heart rate and HRV, around the clock</h3><p>Red, green and infrared LEDs read your heart rate, with continuous 24/7 HRV monitoring.</p></article>
-       <article class="dkc-s" aria-roledescription="slide" aria-label="5 of 5"><span class="dks-k">Powerplugs</span><h3>Add more to the app</h3><p>Optional add-ons that extend the app. Some are free, some are paid.</p></article>
+       <article class="dkc-s" aria-roledescription="slide" aria-label="1 of 6"><span class="dks-k">Sleep</span><h3>Wake up to a sleep score</h3><p>An everyday score that shows how well you rested, with awake, REM, light and deep stages and 10+ contributing metrics.</p></article>
+       <article class="dkc-s" aria-roledescription="slide" aria-label="2 of 6"><span class="dks-k">Recovery</span><h3>Know when you are ready</h3><p>A real-time Recovery Score drawn from sleep, stress rhythm, skin temperature and HRV, tracked through the day.</p></article>
+       <article class="dkc-s" aria-roledescription="slide" aria-label="3 of 6"><span class="dks-k">Movement</span><h3>Every step counted</h3><p>Step counting, distance, calories and VO2 Max, read in the app next to your sleep and recovery.</p></article>
+       <article class="dkc-s" aria-roledescription="slide" aria-label="4 of 6"><span class="dks-k">Heart rate</span><h3>Heart rate and HRV, around the clock</h3><p>Red, green and infrared LEDs read your heart rate, with continuous 24/7 HRV monitoring.</p></article>
+       <article class="dkc-s" aria-roledescription="slide" aria-label="5 of 6"><span class="dks-k">Powerplugs</span><h3>Add more to the app</h3><p>Optional add-ons that extend the app. Some are free, some are paid.</p></article>
+       <article class="dkc-s" aria-roledescription="slide" aria-label="6 of 6"><span class="dks-k">Inside the app</span><h3>Everything the ring sees, in one place</h3><p>Sleep, recovery, movement and heart rate, side by side in the Ultrahuman app.</p></article>
       </div>
       <button type="button" class="dkc-ar prev" aria-label="Previous slide" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
       <button type="button" class="dkc-ar next" aria-label="Next slide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
      </div>
-     <div class="dkc-dots"><button type="button" aria-label="Go to slide 1"></button><button type="button" aria-label="Go to slide 2"></button><button type="button" aria-label="Go to slide 3"></button><button type="button" aria-label="Go to slide 4"></button><button type="button" aria-label="Go to slide 5"></button></div>
+     <div class="dkc-dots"><button type="button" aria-label="Go to slide 1"></button><button type="button" aria-label="Go to slide 2"></button><button type="button" aria-label="Go to slide 3"></button><button type="button" aria-label="Go to slide 4"></button><button type="button" aria-label="Go to slide 5"></button><button type="button" aria-label="Go to slide 6"></button></div>
     </div></section>
 
-  <section class="aseq" id="aseq" aria-label="Inside the app"><i class="as-nb" aria-hidden="true"></i><div class="as-in">
-    <div class="as-clip"><div class="as-gr"></div><div class="as-g2"></div><div class="as-grp">
-      <div class="as-phone"><div class="as-scr">
-        <div class="as-hd as-i" data-i="0"><span class="as-time">9:41</span><img class="as-cell" alt="" src="__SVG:ua-cell__"><img class="as-wifi" alt="" src="__SVG:ua-wifi__"><i class="as-bat"></i><i class="as-bat2"></i><img class="as-cap" alt="" src="__SVG:ua-cap__"><div class="as-logo"><img alt="" src="__SVG:ua-wordmark__"><img class="as-chev" alt="" src="__SVG:ua-chev__"></div></div>
-        <div class="as-stack">
-          <div class="as-ph"></div>
-          <div class="as-txt as-i" data-i="1"><b>Morning, Ritwik</b><p>Excellent recovery last night! The way you responded under pressure, adapted quickly to the situation.</p></div>
-          <div class="as-tl as-i" data-i="2"><div class="as-bar"><span style="left:0;right:65%"></span><span style="left:38%;right:28%"></span><span style="left:75%;right:0"></span><em></em></div><div class="as-tm"><span><img alt="" src="__SVG:ua-moon__">01:14 AM</span><strong>7H 23M</strong><span><img alt="" src="__SVG:ua-sun__">10:30 AM</span></div></div>
-          <div class="as-sc as-i" data-i="3"><small>Sleep Screener</small><div class="as-card"><div><span><img alt="" src="__SVG:ua-heart__">Cardio adaptibility</span><b class="ok">Normal</b></div><div><span><img alt="" src="__SVG:ua-heart__">Temperature</span><b class="ok">Within range</b></div><div><span><img alt="" src="__SVG:ua-hrbad__">Resting HR</span><b class="bad">Elevated</b></div></div></div>
-        </div>
-      </div></div>
-      <div class="as-halo"></div>
-      <div class="as-orb"><img alt="" src="__JPG:orb__"><span class="as-os">Sleep</span><b class="as-on">91</b></div>
-    </div>
-      <video class="as-v" data-src="assets/emerald-video.webm" muted loop playsinline preload="none" aria-label="Ultrahuman app"></video>
-    </div>
-    <div class="as-h"><h2>Inside the app</h2><p>Everything the ring sees, in one place.</p></div>
-  </div></section>
 
   <section class="sec fx oc2" id="occasions"><div class="oc2-pin"><div class="oc2-w">
       <div class="oc2-lw"><div class="oc2-l" id="oc2l">${OCZ.map((o,i)=>`<button type="button" class="oc2-i${i?'':' a'}" data-i="${i}">${o[0]}</button>`).join('')}</div></div>
@@ -2707,14 +2666,27 @@ const TC={gc:['The gift card covers one Ring of the model you choose, at the pri
   voucher:['Vouchers are valid for 12 months from creation and bind to the first email that redeems them.','Balance stays on the code. Partial use is allowed.','Vouchers cover all Ultrahuman products, shipping and tax, and combine with discount codes.','Redeemable only on the store they were issued on.']};
 function sheetOpen(html){const o=$('#overlay');$('#sheet').innerHTML=html;o.classList.add('open');document.body.style.overflow='hidden';$('#sheet').scrollTop=0;const x=$('#sheet .sheet-x');if(x)x.focus({preventScroll:true})}
 function closeSheet(){$('#overlay').classList.remove('open');document.body.style.overflow=''}
+const HWF={
+ gc:rn=>[['1 year','Valid from the date of purchase'],['Free','Engraving, optional at redemption'],['One-time','Single use per gift card'],[rn,'Applies to this ring only']],
+ gsk:rn=>[['6 months','Each code stays valid'],['1 ring','Per code, one model per order'],['24 hours','Kits ship to you'],['Free','Shipping on every kit']],
+ voucher:rn=>[['12 months','From the day it is created'],['Anything','All products, shipping and tax'],['Balance','Stays on the code'],['1 email','Binds to the first who redeems']]};
+const HWK={gc:'The gift card',gsk:'The sizing kit',voucher:'The ring voucher'};
 function openHow(k){
-  const H=STEPS[k], meta={gc:{img:'gcard',n:'Gift Card · '+RINGS[S.ring].name,p:fmt(rp()),cta:'Gift '+RINGS[S.ring].name,to:'#gift-card'},gsk:{img:'kit1',n:'Gift Sizing Kit',p:'From '+fmt(unit(100)),cta:'Buy kits',to:'#corporate'},voucher:{img:'gcard',n:'Ring Voucher',p:'From '+fmt(st().bands[0]),cta:'Choose a value',to:'#vouchers'}}[k];
+  const rn=RINGS[S.ring].name;
+  const H=k==='gc'?{title:`How the ${rn} Gift Card works`,sub:'Gift better health to the ones who matter most. A thoughtful surprise that does not feel last-minute.',steps:[
+    {t:'Give the gift of better health',d:`Surprise someone you care about with the ${rn} Gift Card, with complimentary engraving.`,img:'gcard',chips:['Sent now','Or on a date you pick']},
+    {t:'Easy redemption',d:`The recipient gets a simple redemption link to personalise their ${rn}: choosing their size, finish and optional engraving. The gift card is valid for 1 year from purchase.`,img:'gring',chips:['Size','Finish','Engraving']},
+    {t:'Their ring, their story',d:`Once redeemed, their Ultrahuman ${rn} is made just for them: perfectly sized, engraved, and ready to take their health journey to the next level.`,img:'gengr',chips:['Made for them']}]}:STEPS[k];
+  const tc=k==='gc'?[`The Gift Card is sold at the price shown at purchase.`,`The Gift Card is applicable to the Ultrahuman ${rn} only.`,`The Gift Card includes free engraving, optional during redemption by the recipient.`,`The Gift Card is valid for 1 year from the date of purchase and is for one-time use only.`,`The Gift Card is redeemable only on the store it was issued on, via the <a href="#redeem" onclick="closeSheet()">dedicated redemption page</a>.`]:TC[k];
+  const meta={gc:{img:'gcard',n:'Gift Card · '+rn,p:fmt(rp()),cta:'Gift '+rn,to:'#gift-card'},gsk:{img:'kit1',n:'Gift Sizing Kit',p:'From '+fmt(unit(100)),cta:'Buy kits',to:'#corporate'},voucher:{img:'gcard',n:'Ring Voucher',p:'From '+fmt(st().bands[0]),cta:'Choose a value',to:'#vouchers'}}[k];
+  const card=k==='gc'?mcHTML('au','gold','Gift card','For Maya Rao · '+rn):k==='voucher'?mcHTML('si','rose','Ring voucher','Value $250 · 12 months'):mcHTML('au','gold','Gift sizing kit','One ring per code');
   sheetOpen(`<button class="sheet-x" onclick="closeSheet()" aria-label="Close">&times;</button>
   <div class="sheet-head"><div class="pthumb"><img src="${IMG[meta.img]}" alt=""><div><b>${meta.n}</b><span class="num">${meta.p}</span></div></div><div class="rt"><a class="btn btn-primary" onclick="closeSheet()" href="${meta.to}">${meta.cta}</a></div></div>
-  <div class="sheet-body"><div class="sheet-narrow"><h2 class="sh-title">${H.title}</h2><p class="sh-sub">${H.sub}</p>
-  ${k==='gsk'?`<p class="badge" style="display:flex;justify-content:center;margin-top:16px"><svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor"><path d="M8 0L2 8h4l-1 6 6-8H7z"/></svg>Ships in 24 hours</p>`:''}
-  ${H.steps.map((s,i)=>`<div class="sh-step"><div class="st-vis">${stepVis(s)}</div><h5>Step ${i+1}: ${s.t}</h5><p>${s.d}</p></div>`).join('')}
-  <div class="tc"><div>Terms &amp; Conditions</div><ol>${TC[k].map(t=>`<li>${t}</li>`).join('')}</ol></div></div></div>`);
+  <div class="hw2"><header class="hw2-top"><span class="hw-k">${HWK[k]}</span><h2>${H.title}</h2><p>${H.sub}</p>${k==='gsk'?`<span class="hw-badge">Ships in 24 hours</span>`:''}</header>
+  <div class="hw2-steps">${H.steps.map((s,i)=>`<article class="hw2-st rvh"><div class="hw2-vs">${stepVis(s)}</div><div class="hw2-tl"><span class="hw2-n">${i+1}</span><div class="hw2-tx"><h3>${s.t}</h3><p>${s.d}</p></div></div></article>`).join('')}</div>
+  <section class="hw2-tc rvh"><span class="hw-k hw-kd">Terms &amp; conditions</span><ol>${tc.map(t=>`<li><span>${t}</span></li>`).join('')}</ol></section></div>`);
+  const sh=$('#sheet'),io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{root:sh,threshold:.12});
+  sh.querySelectorAll('.rvh').forEach(e=>io.observe(e));
 }
 
 /* =====================================================================
@@ -3467,97 +3439,7 @@ scan();new MutationObserver(()=>requestAnimationFrame(scan)).observe(document.bo
  new MutationObserver(scan).observe(document.body,{childList:true,subtree:true});scan();
 })();
 /*DKC-JS-END*/
-/*AS-JS*/
-(function(){
- try{history.scrollRestoration='manual'}catch(e){}/* a refresh starts at the top, so the intro sequence replays */
- const RM=window.matchMedia&&matchMedia('(prefers-reduced-motion:reduce)').matches;
- const cl=(x,a=0,b=1)=>Math.min(b,Math.max(a,x)),E=(x,a,b)=>cl((x-a)/(b-a)),ez=t=>t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2,L=(a,b,t)=>a+(b-a)*t;
- let ticking=0,best=0;/* scrolling back rewinds the intro until the video opens; after that it stays put until a refresh */
- function init(){
-  const sec=document.getElementById('aseq');if(!sec||sec._i)return;sec._i=1;
-  const q=s=>sec.querySelector(s),nb=q('.as-nb'),st=q('.as-in'),clip=q('.as-clip'),grp=q('.as-grp'),orb=q('.as-orb'),gr=q('.as-gr'),g2=q('.as-g2'),ph=q('.as-phone'),os=q('.as-os'),on=q('.as-on'),vid=q('.as-v'),hd=q('.as-h'),
-   its=[...sec.querySelectorAll('.as-i')];
-  let vOn=false;
-  let cur=0,last=0;
-  const target=()=>{const r=sec.getBoundingClientRect(),tot=Math.max(1,sec.offsetHeight-st.clientHeight);
-   const raw=RM?1:cl((((parseFloat(getComputedStyle(st).top)||0)-r.top)/tot)/.86);return best===1?1:raw};
-  function done(){
-   if(sec.classList.contains('as-done'))return;
-   const navh=parseFloat(getComputedStyle(st).top)||0,r=sec.getBoundingClientRect(),above=r.bottom<navh,a=above?sec.nextElementSibling:st;
-   const before=a.getBoundingClientRect().top;sec.classList.add('as-done');
-   const after=a.getBoundingClientRect().top;if(after!==before){scrollTo({top:scrollY+(after-before),behavior:'instant'});if(window.__ssReset)window.__ssReset()}
-  }
-  function tick(t){
-   ticking=0;const dt=Math.min(64,t-(last||t));last=t;const tg=target();
-   cur+=(tg-cur)*(1-Math.exp(-dt/420));if(Math.abs(tg-cur)<.0006)cur=tg;
-   if(cur>=.9)best=1;/* locks only once the video has opened */
-   render(cur);
-   if(cur!==tg){ticking=1;requestAnimationFrame(tick)}else{last=0;if(cur>=.985)done()}
-  }
-  let G=null,gWas=true;
-  function measure(){
-   /* card inset as in the first version of this section (136/1512 of the stage each side); the header lines up with the card; always exactly 16:9 */
-   const W0=st.clientWidth,mob0=W0<760;
-   const bl=mob0?20:Math.round(W0*136/1512),br=W0-bl;
-   hd.style.left=bl+'px';hd.style.right=bl+'px';hd.style.maxWidth='none';hd.style.margin='0';
-   hd.style.top='';st.style.setProperty('--mpad','0px');
-   if(mob0){const nat=hd.offsetTop,gh=hd.offsetHeight+64+(br-bl)*9/16,t=Math.max(nat,Math.round((st.clientHeight-gh)/2));hd.style.top=t+'px';st.style.setProperty('--mpad',(t-nat)+'px')}
-   const bt=hd.offsetTop+hd.offsetHeight+64,bh=(br-bl)*9/16;
-   st.style.minHeight=Math.ceil(bt+bh+24)+'px';
-   const W=st.clientWidth,H=st.clientHeight,mob=W<760;
-   const u=mob?Math.min(W/560,H/982):Math.min(W/1512,H/982),ox=(W-1512*u)/2,oy=(H-982*u)/2;
-   G={W,H,mob,u,ox,oy,cxp:ox+756*u,cyp:oy+490*u,R:80*u,B:[bl,bt,br,bt+bh]};gWas=true;
-  }
-  function render(p){
-   if(!G||G.W!==st.clientWidth||G.H!==st.clientHeight)measure();
-   const {W,H,u,ox,oy,cxp,cyp,R,B}=G;
-   /* a soft blue gradient rises from the bottom edge, then pulls in on itself and condenses into the orb: no box, no outline */
-   const ge=E(p,0,.2),gi=1-Math.pow(1-ge,2.2),m=ez(E(p,.2,.42)),sw=ez(E(p,.36,.45)),oi=ez(E(p,.38,.49));
-   const A=gi*(1-sw*.55)*(1-oi),gAct=p<.5;
-   /* four overlapping soft blobs with gaussian fall-off: no edges, no seams. They rise at slightly different speeds, then pull into one point */
-   const gs=(c,al)=>{let o='';for(let k=0;k<=12;k++){const t=k/12;o+=`rgba(${c},${(al*Math.exp(-Math.pow(t*2.2,2))).toFixed(4)}) ${(t*100).toFixed(1)}%,`}return o+`rgba(${c},0) 100%`};
-   const lay=[
-    {c:'130,184,255',a:.95,rx:1.35*W,ry:.62*H,ex:1.9*R,ey:1.9*R,k:0,fade:.9},
-    {c:'86,146,255',a:1,rx:.66*W,ry:.9*H,ex:1.8*R,ey:1.8*R,k:1,fade:.2},
-    {c:'22,80,240',a:1,rx:.38*W,ry:.98*H,ex:1.25*R,ey:1.25*R,k:2,fade:0},
-    {c:'8,30,110',a:1,rx:.21*W,ry:.66*H,ex:.72*R,ey:.64*R,k:3,fade:0}];
-   if(gAct||gWas){gr.style.background=lay.map((l,i)=>{
-    const mi=ez(E(p,.2+.01*i,.42));
-    const rise=L(H*(1.3+.03*i),H*.84,gi);
-    const sway=Math.sin(p*14+i*1.7)*W*.018*(1-mi);
-    const cx=L(l.sx!==undefined?W*l.sx+sway:cxp+sway,cxp,mi),cy=L(rise,cyp,mi);
-    const sx=G.mob?1.9:1,sy=G.mob?.58:1,rx=L(l.rx*sx,l.ex,mi),ry=L(l.ry*sy,l.ey,mi);
-    return `radial-gradient(ellipse ${rx.toFixed(1)}px ${ry.toFixed(1)}px at ${cx.toFixed(1)}px ${cy.toFixed(1)}px,${gs(l.c,A*l.a*(1-mi*l.fade))})`}).join(',');
-   Object.assign(g2.style,{left:(cxp-R)+'px',top:(cyp-R)+'px',width:(2*R)+'px',height:(2*R)+'px',opacity:sw*(1-oi),filter:`blur(${(1-sw)*10}px)`,boxShadow:`0 ${5.8*u}px ${12.7*u}px rgba(0,0,0,${.35*sw})`});
-   gWas=gAct;}
-   orb.style.opacity=oi;{const bl2=(1-ez(E(p,.36,.50)))*14;orb.style.filter=bl2<.05?'none':`blur(${bl2.toFixed(2)}px)`}orb.style.transform='none';st.style.setProperty('--sh',oi.toFixed(3));
-   /* phone fades up around the orb */
-   const out=1-ez(E(p,.86,.94)),pr0=ez(E(p,.44,.58)),pp=pr0*out;ph.style.opacity=pp;ph.style.transform=`translateY(${(1-pr0)*40}px) scale(${.97+.03*pr0})`;
-   its.forEach(e=>{const i=+e.dataset.i,o=ez(E(p,.46+.025*i,.56+.025*i));e.style.opacity=o;e.style.transform=`translateY(${(1-o)*18}px)`});
-   const so=ez(E(p,.50,.58))*out;os.style.opacity=so;on.style.opacity=so;orb.style.opacity=oi*out;on.textContent=Math.round(91*ez(E(p,.52,.62)));
-   /* the grey background shrinks into a card */
-   const c1=ez(E(p,.60,.80));
-   const AA=[0,0,W,H];
-   const rc=AA.map((a,i)=>L(a,B[i],c1)),rad=L(0,32,c1);
-   if(nb)nb.style.opacity=(1-c1).toFixed(3);
-   clip.style.clipPath=`inset(${rc[1]}px ${W-rc[2]}px ${H-rc[3]}px ${rc[0]}px round ${rad}px)`;
-   grp.style.left=L(ox+756*u,(B[0]+B[2])/2,c1)+'px';grp.style.top=L(oy+490*u,(B[1]+B[3])/2,c1)+'px';grp.style.transform=`scale(${u*(1-.15*c1)})`;
-   /* then the film plays in the card */
-   Object.assign(vid.style,{left:(B[0]-2)+'px',top:(B[1]-2)+'px',width:(B[2]-B[0]+4)+'px',height:(B[3]-B[1]+4)+'px'});
-   const vo=ez(E(p,.86,.97));vid.style.opacity=vo;{const ho=ez(E(p,.88,.99));hd.style.opacity=ho;hd.style.transform=`translateY(${(1-ho)*12}px)`}
-   if(vo>0&&!vOn){vOn=true;if(!vid.src&&vid.dataset.src)vid.src=vid.dataset.src;vid.currentTime=0;const pr=vid.play();if(pr&&pr.catch)pr.catch(()=>{})}
-  }
-  const DBG=new URLSearchParams(location.search).get('asp');
-  const kick=()=>{if(DBG!==null)return;if(!ticking){ticking=1;requestAnimationFrame(tick)}};
-  addEventListener('scroll',kick,{passive:true});addEventListener('resize',()=>{G=null;kick()});
-  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(()=>{G=null;kick()});
-  if(DBG!==null){document.documentElement.classList.add('asdbg');const pv=Math.min(1,Math.max(0,+DBG));measure();{const vt=new URLSearchParams(location.search).get('vt');if(vt!==null){vid.muted=true;vid.src=vid.dataset.src;vid.addEventListener('loadedmetadata',()=>{vid.currentTime=+vt},{once:true})}}cur=pv;if(pv>=.9)best=1;if(pv>=.985)sec.classList.add('as-done');render(pv)}
-  if(RM){cur=1}kick();
- }
- function scan(){const e=document.getElementById('aseq');if(e&&!e._i)init()}
- scan();new MutationObserver(()=>requestAnimationFrame(scan)).observe(document.body,{childList:true,subtree:true});
-})();
-/*AS-JS-END*/
+
 /*ONLY-JS*/
 /* ?only=N shows just the Nth block of the landing page (used for exporting stills) */
 (function(){const Q=new URLSearchParams(location.search),sy=Q.get('sy');if(sy!==null)addEventListener('load',()=>setTimeout(()=>scrollTo({top:+sy,behavior:'instant'}),900));const o=Q.get('only');if(o===null)return;
@@ -3654,6 +3536,7 @@ x.putImageData(im,0,0);document.documentElement.style.setProperty('--face','url(
  function scan(){if(!io)return;document.querySelectorAll('.mc-stage .mc[data-metal]').forEach(c=>{if(c._in)return;c._in=1;io.observe(c)})}
  new MutationObserver(scan).observe(document.body,{childList:true,subtree:true});scan();
 })();
+(function(){const k=new URLSearchParams(location.search).get('how');if(k)addEventListener('load',()=>setTimeout(()=>{try{openHow(k)}catch(e){}},1200))})();
 /*GC-JS-END*/
 
 /*GT-JS*/
